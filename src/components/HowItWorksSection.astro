@@ -1,0 +1,135 @@
+---
+const processSteps = [
+  {
+    id: 1,
+    title: 'Connect',
+    description:
+      'Begin with a consultation where you share your style, needs, and vision. We listen, ask the right questions, and get to know what truly makes a space feel like home for you.',
+    image: {
+      src: '/src/assets/images/consultation.jpg',
+      alt: 'Consultation process visualization',
+    },
+  },
+  {
+    id: 2,
+    title: 'Design',
+    description:
+      'Using your input, we make a personalized design plan with mood boards, 3D renderings, and detailed layouts — so you can visualize your space before the transformation begins.',
+    image: {
+      src: '/src/assets/images/design.jpg',
+      alt: 'Design process visualization',
+    },
+  },
+  {
+    id: 3,
+    title: 'Transform',
+    description:
+      'Watch your space come to life as our team brings the design to reality with expert craftsmanship, thoughtful execution, and a keen eye for detail.',
+    image: {
+      src: '/src/assets/images/transform.jpg',
+      alt: 'Transformation process visualization',
+    },
+  },
+];
+---
+
+<section id="how-it-works" class="process">
+  <div class="section-container">
+    <div class="process-content">
+      <span class="section-tag">HOW IT WORKS</span>
+      <h2 class="section-title">How we bring your space to life.</h2>
+      <div class="process-steps">
+        {
+          processSteps.map(step => (
+            <div class="process-step">
+              <div class="process-step-content">
+                <h3 class="process-step-title">{step.title}</h3>
+                <p class="process-step-description">{step.description}</p>
+              </div>
+              <div class="process-step-image-wrapper">
+                <img src={step.image.src} alt={step.image.alt} class="media" />
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--px-64);
+  }
+
+  .process-step {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--px-64);
+    align-items: center;
+  }
+
+  .process-step:nth-child(even) {
+    direction: rtl;
+  }
+
+  .process-step:nth-child(even) .process-step-content {
+    direction: ltr;
+  }
+
+  .process-step-title {
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    margin-bottom: var(--px-16);
+  }
+
+  .process-step-description {
+    max-width: 31.25rem;
+  }
+
+  .process-step-image-wrapper {
+    width: 100%;
+    height: 100%;
+    max-height: 20.625rem;
+    overflow: hidden;
+  }
+
+  @media screen and (max-width: 64rem) {
+    .process-step {
+      gap: var(--px-32);
+    }
+
+    .process-images {
+      max-height: 18rem;
+    }
+  }
+
+  @media screen and (max-width: 48rem) {
+    .process-steps {
+      gap: var(--px-32);
+    }
+
+    .process-step {
+      grid-template-columns: 1fr;
+      gap: var(--px-32);
+    }
+
+    .process-step:nth-child(even) {
+      direction: ltr;
+    }
+
+    .process-step-content {
+      order: -1;
+    }
+
+    .process-step-description {
+      max-width: 100%;
+    }
+
+    .process-images {
+      max-height: 15rem;
+    }
+  }
+</style>

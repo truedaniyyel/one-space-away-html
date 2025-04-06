@@ -1,0 +1,88 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  errorCode: string;
+  errorMessage: string;
+  errorDescription: string;
+}
+
+const { title, description, errorCode, errorMessage, errorDescription } =
+  Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <section id="error" class="error">
+    <div class="error-container">
+      <div class="error-content">
+        <h1 class="error-title">{errorCode}</h1>
+        <p class="error-message">{errorMessage}</p>
+        <p class="error-description">{errorDescription}</p>
+        <a href="/" class="btn btn--primary">GO TO HOMEPAGE</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .error {
+      min-height: 100vh;
+      padding-block: 6.688rem var(--px-56);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .error-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 37.5rem;
+    }
+
+    .error-title {
+      font-size: clamp(3rem, 6vw, var(--text-xxl));
+      font-weight: 700;
+      margin-bottom: var(--px-24);
+    }
+
+    .error-message {
+      font-size: var(--text-3xl);
+      font-weight: 500;
+      opacity: 1;
+      margin-bottom: var(--px-16);
+    }
+
+    .error-description {
+      font-size: var(--text-lg);
+      margin-bottom: var(--px-32);
+    }
+
+    .btn {
+      display: inline-block;
+    }
+
+    @media screen and (max-width: 64rem) {
+      .error {
+        padding-block: var(--px-48) var(--px-32);
+      }
+
+      .error-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+      }
+    }
+
+    @media screen and (max-width: 42.188rem) {
+      .error {
+        padding-block: var(--px-32) var(--px-20);
+      }
+
+      .error-title {
+        font-size: clamp(2rem, 4vw, 3rem);
+      }
+    }
+  </style>
+</BaseLayout>

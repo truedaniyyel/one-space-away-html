@@ -1,0 +1,245 @@
+---
+import { SITE, SOCIALS } from '@consts';
+import socialIcons from '@assets/socialIcons';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="main-footer">
+  <div class="footer footer-primary">
+    <div class="footer-brand">
+      <a href="/" class="headline logo" aria-label="One Space Away home">
+        One Space Away
+      </a>
+      <p class="site-description">{SITE.DESCRIPTION}</p>
+
+      <address class="footer-nav-list contact-info">
+        <p class="phone">
+          <span class="label">T.</span>
+          <a href="">{SITE.TELEPHONE}</a>
+        </p>
+        <p class="email">
+          <span class="label">E.</span>
+          <a href="">{SITE.EMAIL}</a>
+        </p>
+      </address>
+    </div>
+
+    <nav class="footer-navigation" aria-label="Footer navigation">
+      <div class="footer-nav-section">
+        <h2 class="headline footer-heading">Company</h2>
+        <ul class="footer-nav-list">
+          <li>
+            <a href="#hero" class="footer-link">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="footer-link">About</a>
+          </li>
+          <li>
+            <a href="#how-it-works" class="footer-link">How it Works</a>
+          </li>
+          <li>
+            <a href="#portfolio" class="footer-link">Portfolio</a>
+          </li>
+          <li>
+            <a href="#contact" class="footer-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-nav-section">
+        <h2 class="headline footer-heading">Social Media</h2>
+        <ul class="footer-nav-list social-links-list">
+          {
+            SOCIALS.map(social => (
+              <>
+                <li class="social-item">
+                  <a
+                    href={social.HREF}
+                    aria-label={social.LABEL}
+                    class="footer-link social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Fragment set:html={socialIcons[social.ICON]} />
+                    {social.NAME}
+                  </a>
+                </li>
+              </>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="footer-nav-section">
+        <h2 class="headline footer-heading">Legal & Press</h2>
+        <ul class="footer-nav-list">
+          <li>
+            <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="/terms-conditions" class="footer-link"
+              >Terms & Conditions</a
+            >
+          </li>
+          <li>
+            <a href="/rss.xml" class="footer-link">RSS</a>
+          </li>
+          <li>
+            <a href="/sitemap-index.xml" class="footer-link">SiteMap</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="footer footer-secondary">
+    <div class="copyright">
+      <p>&copy; {SITE.COMPANY_NAME} {currentYear}.</p>
+    </div>
+    <div class="location">
+      <p>Based in London, United Kingdom.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  a {
+    transition: all var(--transition-short);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    a:hover {
+      color: var(--color-text-primary);
+    }
+  }
+
+  a:active {
+    color: var(--color-text-primary);
+  }
+
+  .headline {
+    color: var(--color-text-primary);
+  }
+
+  .main-footer {
+    background-color: var(--color-background);
+    padding-top: var(--px-112);
+    padding-bottom: var(--px-28);
+    color: var(--color-text-dark);
+    font-size: var(--text-sm);
+  }
+
+  .main-footer p {
+    opacity: 1;
+  }
+
+  .footer {
+    margin-inline: var(--px-64);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-primary {
+    margin-bottom: var(--px-112);
+  }
+
+  .logo {
+    display: inline-block;
+    margin-bottom: var(--px-28);
+    font-size: var(--text-xl);
+    font-weight: 700;
+  }
+
+  .site-description {
+    margin-bottom: var(--px-32);
+  }
+
+  .footer-navigation {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 16%;
+    gap: var(--px-96);
+  }
+
+  .footer-heading {
+    margin-bottom: var(--px-16);
+    font-size: var(--text-lg);
+    letter-spacing: -0.02em;
+    font-weight: 500;
+    text-wrap: nowrap;
+  }
+
+  .footer-nav-list {
+    display: inline-flex;
+    flex-direction: column;
+    font-size: var(--text-sm);
+    gap: var(--px-8);
+    text-wrap: nowrap;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: var(--px-6);
+  }
+
+  .social-link :global(svg) {
+    height: var(--px-18);
+  }
+
+  .contact-info {
+    font-style: normal;
+  }
+
+  .footer-secondary {
+    font-weight: 500;
+  }
+
+  @media screen and (max-width: 64rem) {
+    .main-footer {
+      padding-top: var(--px-80);
+    }
+
+    .footer {
+      flex-wrap: wrap;
+      gap: var(--px-48);
+      margin-inline: var(--px-28);
+    }
+
+    .footer-navigation {
+      margin-left: 0;
+      width: auto;
+    }
+
+    .footer-primary {
+      margin-bottom: var(--px-80);
+    }
+  }
+
+  @media screen and (max-width: 37.5rem) {
+    .main-footer {
+      padding-top: var(--px-64);
+    }
+
+    .footer {
+      margin-inline: var(--px-20);
+    }
+
+    .footer-navigation {
+      grid-template-columns: 1fr;
+      width: 100%;
+      gap: var(--px-28);
+    }
+
+    .footer-secondary {
+      gap: var(--px-6) var(--px-48);
+    }
+
+    .footer-primary {
+      margin-bottom: var(--px-48);
+    }
+  }
+</style>

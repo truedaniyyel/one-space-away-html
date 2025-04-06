@@ -1,0 +1,337 @@
+---
+import BaseSwiper from './BaseSwiper.astro';
+
+const testimonials = [
+  {
+    id: 1,
+    type: 'image',
+    client: {
+      name: 'Sarah Johnson',
+      location: 'Beverly Hills, California',
+      image: '/src/assets/images/sarah-johnson.jpg',
+    },
+    content:
+      'Working with One Space Away transformed not just our home, but how we live in it. Their attention to detail and understanding of our needs was exceptional.',
+  },
+  {
+    id: 2,
+    type: 'image',
+    client: {
+      name: 'Emma Lewis',
+      location: 'Palm Beach, Florida',
+      image: '/src/assets/images/emma.jpg',
+    },
+    content:
+      "I had a general idea of what I wanted but wasn't sure how to bring it all together. They helped refine my vision and created a space that feels effortless and perfectly me.",
+  },
+  {
+    id: 3,
+    type: 'video',
+    client: {
+      name: 'Charlotte Bennett',
+      location: 'Austin, Texas',
+    },
+    video: {
+      src: 'videos/charlotte-bennett.mov',
+      poster: 'testimonial-video-placeholder.webp',
+    },
+  },
+];
+---
+
+<section id="testimonials" class="testimonials">
+  <div class="section-container">
+    <span class="section-tag">TESTIMONIALS</span>
+    <h2 class="section-title">Real homes, real stories.</h2>
+
+    <BaseSwiper sliderName="testimonials" navigation={false}>
+      {
+        testimonials.map(testimonial => (
+          <div class="swiper-slide testimonials-slide">
+            <article class="testimonial-card">
+              {testimonial.type === 'image' ? (
+                <>
+                  <div class="testimonial-header">
+                    <div class="testimonial-image">
+                      <img
+                        class="media"
+                        src={testimonial.client.image}
+                        alt={testimonial.client.name}
+                      />
+                    </div>
+                    <div class="client-info">
+                      <cite class="client-name">{testimonial.client.name}</cite>
+                      <span class="client-location">
+                        {testimonial.client.location}
+                      </span>
+                    </div>
+                  </div>
+                  <blockquote class="testimonial-content">
+                    <p>{testimonial.content}</p>
+                  </blockquote>
+                </>
+              ) : (
+                <div class="testimonial-video-wrapper">
+                  <video
+                    class="media testimonial-video"
+                    playsinline
+                    loop
+                    controls
+                    controlslist="nodownload nofullscreen noremoteplayback"
+                    disablepictureinpicture
+                    preload="none"
+                    poster={testimonial.video?.poster}
+                  >
+                    <source src={testimonial.video?.src} type="video/mp4" />
+                  </video>
+                  <div class="video-header">
+                    <div class="client-info">
+                      <cite class="client-name">{testimonial.client.name}</cite>
+                      <span class="client-location">
+                        {testimonial.client.location}
+                      </span>
+                    </div>
+                    <button
+                      class="video-control"
+                      aria-label="Toggle video playback"
+                    >
+                      <svg
+                        class="icon-play"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 384 512"
+                        stroke="#1f1f1f"
+                      >
+                        <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                      </svg>
+                      <svg
+                        class="icon-pause"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512"
+                        stroke="#1f1f1f"
+                      >
+                        <path d="M48 64C21.5 64 0 85.5 0 112L0 400c0 26.5 21.5 48 48 48l32 0c26.5 0 48-21.5 48-48l0-288c0-26.5-21.5-48-48-48L48 64zm192 0c-26.5 0-48 21.5-48 48l0 288c0 26.5 21.5 48 48 48l32 0c26.5 0 48-21.5 48-48l0-288c0-26.5-21.5-48-48-48l-32 0z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              )}
+            </article>
+          </div>
+        ))
+      }
+    </BaseSwiper>
+  </div>
+</section>
+
+<style>
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    transition: all var(--transition-long);
+  }
+
+  .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    height: 100%;
+    aspect-ratio: 2/3;
+    max-height: 34.375rem;
+  }
+
+  .testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: var(--px-16);
+    margin-block: var(--px-32) var(--px-24);
+  }
+
+  .testimonial-image {
+    width: var(--px-80);
+    height: var(--px-80);
+    overflow: hidden;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .client-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--px-4);
+  }
+
+  .testimonial-video-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: black;
+  }
+
+  .testimonial-video-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .testimonial-video-wrapper:not(.playing)::before {
+    opacity: 1;
+  }
+
+  .video-header {
+    position: absolute;
+    top: var(--px-16);
+    left: var(--px-16);
+    right: var(--px-16);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-white);
+  }
+
+  .video-header .client-name,
+  .video-header .client-location {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .video-control {
+    width: var(--px-40);
+    height: var(--px-40);
+    border-radius: 50%;
+    background-color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-medium);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .video-control:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .video-control svg {
+    height: var(--px-20);
+  }
+
+  .video-control .icon-play {
+    padding-left: 0.188rem;
+  }
+
+  .video-control .icon-pause {
+    display: none;
+  }
+
+  .video-control.playing .icon-play {
+    display: none;
+  }
+
+  .video-control.playing .icon-pause {
+    display: block;
+  }
+
+  .client-name {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .testimonials-swiper.-non-slider .swiper-pagination {
+    display: none;
+  }
+
+  @media screen and (max-width: 48rem) {
+    .testimonial-header {
+      padding: var(--px-16);
+    }
+
+    .testimonial-content {
+      padding: var(--px-16);
+    }
+
+    .video-header {
+      top: var(--px-8);
+      left: var(--px-8);
+      right: var(--px-8);
+    }
+  }
+</style>
+
+<script>
+  import { initSwiper } from '@utils/initSwiper';
+
+  const initTestimonialsSlider = () => {
+    const testimonialsSwiper = initSwiper('testimonials', {
+      pagination: {
+        el: '.testimonials-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        320: { slidesPerView: 1, spaceBetween: 16 },
+        768: { slidesPerView: 2, spaceBetween: 64 },
+        872: { slidesPerView: 2, spaceBetween: 0 },
+        1200: { slidesPerView: 3, spaceBetween: 76 },
+      },
+      on: {
+        resize: function (swiper) {
+          if (1200 <= window.innerWidth) {
+            swiper.disable();
+            swiper.el.classList.add('-non-slider');
+          } else {
+            swiper.enable();
+            swiper.el.classList.remove('-non-slider');
+          }
+        },
+      },
+    });
+
+    document.querySelectorAll('.testimonial-video-wrapper').forEach(wrapper => {
+      const video = wrapper.querySelector(
+        '.testimonial-video'
+      ) as HTMLVideoElement | null;
+      const control = wrapper.querySelector('.video-control');
+
+      if (!video || !control) return;
+
+      const toggleVideo = () => {
+        video.paused ? video.play() : video.pause();
+        control.classList.toggle('playing', !video.paused);
+        wrapper.classList.toggle('playing', !video.paused);
+      };
+
+      control.addEventListener('click', toggleVideo);
+      video.addEventListener('ended', () => {
+        control.classList.remove('playing');
+        wrapper.classList.remove('playing');
+      });
+    });
+
+    return () => {
+      testimonialsSwiper.destroy();
+    };
+  };
+
+  let cleanup = initTestimonialsSlider();
+
+  document.addEventListener('astro:after-swap', () => {
+    if (cleanup) cleanup();
+    cleanup = initTestimonialsSlider();
+  });
+</script>

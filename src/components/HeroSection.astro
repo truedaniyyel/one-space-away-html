@@ -1,0 +1,140 @@
+<section id="hero" class="hero">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title">Home, just the way you like.</h1>
+      <p class="hero-subtitle">
+        Discover the joy of living in a space that feels truly yours.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn--primary">START TRANSFORMATION</a>
+        <a href="#how-it-works" class="btns--secondary">
+          <span class="btn--secondary btn--secondary-unhovered">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+              ><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+              <path
+                d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"
+              ></path>
+            </svg>
+            How It Works?
+          </span>
+          <span
+            class="btn--secondary btn--secondary-hovered"
+            aria-hidden="true"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+              ><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+              <path
+                d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"
+              ></path>
+            </svg>
+            How It Works?
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="video-wrapper">
+      <video class="media" preload="auto" autoplay loop muted playsinline>
+        <source src="videos/hero_video.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    padding-block: 6.688rem var(--px-56);
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--px-64);
+    align-items: center;
+  }
+
+  .hero-content {
+    max-width: 37.5rem;
+  }
+
+  .hero-title {
+    margin-bottom: var(--px-28);
+    font-size: clamp(2.125rem, 6vw, var(--text-xxl));
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(var(--text-xl), 2vw, var(--text-2xl));
+    margin-bottom: var(--px-48);
+    line-height: 1.5;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: var(--px-16) var(--px-48);
+    flex-wrap: wrap;
+  }
+
+  .btns--secondary {
+    font-weight: 500;
+    margin-top: 0.438rem;
+  }
+
+  .btn--secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--px-8);
+  }
+
+  .btn--secondary svg {
+    height: var(--px-16);
+  }
+
+  .video-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  @media screen and (max-width: 64rem) {
+    .hero-container {
+      gap: var(--px-32);
+    }
+
+    .hero-content {
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 59.375rem) {
+    .hero {
+      min-height: auto;
+    }
+
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: var(--px-32);
+    }
+
+    .hero-title {
+      margin-bottom: var(--px-24);
+    }
+
+    .hero-subtitle {
+      margin-bottom: var(--px-36);
+    }
+
+    .hero-cta {
+      column-gap: var(--px-32);
+    }
+
+    .video-wrapper {
+      min-height: 18.75rem;
+    }
+  }
+</style>

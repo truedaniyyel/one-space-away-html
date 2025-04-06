@@ -1,0 +1,24 @@
+{
+  "name": "one-space-away-html",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/generate-csp-header.mjs",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.3.0",
+    "astro": "^5.6.1",
+    "satori": "^0.12.2",
+    "satori-html": "^0.3.2",
+    "sharp": "^0.34.0",
+    "swiper": "^11.2.6"
+  },
+  "devDependencies": {
+    "prettier": "3.5.3",
+    "prettier-plugin-astro": "0.14.1"
+  }
+}

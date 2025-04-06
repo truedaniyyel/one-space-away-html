@@ -1,0 +1,259 @@
+---
+const faqItems = [
+  {
+    id: 1,
+    question: 'What services do you offer?',
+    answer:
+      'We provide end-to-end interior design solutions — from the initial consultation and custom design plans (including mood boards and 3D renderings) to complete transformations with expert craftsmanship.',
+  },
+  {
+    id: 2,
+    question: 'How does the consultation process work?',
+    answer:
+      "It all starts with a friendly conversation. We sit down (or hop on a video call) to chat about your style, how you use your space, and what makes you feel at home. Our goal is to really get to know you so we can create a design that's totally you.",
+  },
+  {
+    id: 3,
+    question: 'Can I see what my design will look like before the work begins?',
+    answer:
+      "Absolutely! Once we've talked things through, we whip up a design plan complete with mood boards, layouts, and 3D renderings. This way, you can see exactly how your ideas come together before we break out the tools.",
+  },
+  {
+    id: 4,
+    question: "What's the typical timeline for a project?",
+    answer:
+      "Every project is different. After we nail down your design plan, we'll work together to set a realistic timeline that fits your needs. We keep you in the loop from start to finish, making sure the process is smooth and stress-free.",
+  },
+  {
+    id: 5,
+    question: 'How do you work with different budgets?',
+    answer:
+      "We believe great design should work for everyone. Early on, we'll talk about your budget and find creative, cost-effective ways to bring your vision to life — without skimping on quality or style.",
+  },
+  {
+    id: 6,
+    question: 'Can I incorporate my current furniture or design pieces?',
+    answer:
+      "For sure! We love adding personal touches that make your space uniquely yours. Whether you're bringing in favorite pieces or working with your existing layout, we'll blend everything together seamlessly.",
+  },
+  {
+    id: 7,
+    question: 'How do you make sure my personal style comes through?',
+    answer:
+      'Your style is our blueprint. We start by listening closely to your ideas and preferences, then tailor every detail — from the materials we choose to the final layout — to make sure your personality shines through in every corner of your home.',
+  },
+  {
+    id: 8,
+    question: 'What if I have new ideas or changes during the project?',
+    answer:
+      'No problem at all. We get that plans can evolve. Our process is super flexible, so we can tweak things as we go along to make sure your space always matches your vision.',
+  },
+  {
+    id: 9,
+    question: 'Do you offer virtual consultations?',
+    answer:
+      "Yep! Whether you're down the street or across the country, we offer both in-person and virtual consultations. It's all about making the process as convenient as possible for you.",
+  },
+  {
+    id: 10,
+    question: 'How do I get started?',
+    answer:
+      "It's simple — just give us a call or shoot us an email. We'll set up your initial consultation, get to know your ideas, and kick off the journey to creating a space that feels just right.",
+  },
+];
+---
+
+<section id="faq" class="faq">
+  <div class="section-container faq-container">
+    <div class="faq-header">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">We’ve got answers.</h2>
+    </div>
+
+    <div class="faq-content">
+      <div class="accordion">
+        {
+          faqItems.map(item => (
+            <div class="accordion-item">
+              <button class="accordion-button">
+                <span class="button-text">{item.question}</span>
+                <svg
+                  class="button-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="content-wrapper">
+                  <p>{item.answer}</p>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--px-64);
+    align-items: start;
+  }
+
+  .faq-header {
+    position: sticky;
+    top: var(--px-32);
+    max-width: 80%;
+  }
+
+  .accordion {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .accordion-item {
+    border-bottom: var(--px-1) solid var(--color-primary);
+  }
+
+  .accordion-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--px-16);
+    padding: var(--px-20) 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: all var(--transition-long);
+  }
+
+  .button-text {
+    font-size: var(--text-xl);
+    font-weight: 400;
+    transition: all var(--transition-long);
+  }
+
+  .button-icon {
+    width: var(--px-20);
+    height: var(--px-20);
+    transition: all var(--transition-long);
+    flex-shrink: 0;
+  }
+
+  .accordion-item.active .button-text {
+    font-weight: 500;
+  }
+
+  .accordion-item.active .button-icon {
+    transform: rotate(45deg);
+  }
+
+  .accordion-content {
+    height: 0;
+    overflow: hidden;
+    transition: height var(--transition-long);
+  }
+
+  .content-wrapper {
+    padding-bottom: 0.813rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all var(--transition-long);
+  }
+
+  .accordion-item.active .content-wrapper {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .accordion-button:hover .button-text,
+    .accordion-button:hover .button-icon {
+      opacity: 0.65;
+    }
+  }
+
+  @media (max-width: 64rem) {
+    .faq-container {
+      gap: var(--px-32);
+    }
+  }
+
+  @media (max-width: 48rem) {
+    .faq-container {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .faq-header {
+      position: static;
+      max-width: none;
+    }
+
+    .section-title {
+      margin-bottom: var(--px-44);
+    }
+  }
+</style>
+
+<script>
+  function initFAQAccordion() {
+    const accordionContainer = document.querySelector('.faq-container');
+
+    if (!accordionContainer) return;
+
+    accordionContainer.addEventListener('click', e => {
+      const button = (e.target as HTMLElement).closest('.accordion-button');
+
+      if (!button) return;
+
+      const item = button.closest('.accordion-item');
+      const content = item?.querySelector<HTMLElement>('.accordion-content');
+
+      if (!item || !content) return;
+
+      const isActive = item.classList.contains('active');
+
+      document.querySelectorAll('.accordion-item.active').forEach(accItem => {
+        const accContent =
+          accItem.querySelector<HTMLElement>('.accordion-content');
+        const accButton = accItem.querySelector('.accordion-button');
+
+        if (!accContent || !accButton) return;
+
+        if (accItem !== item) {
+          accItem.classList.remove('active');
+          accContent.style.height = '0';
+          accButton.setAttribute('aria-expanded', 'false');
+          accContent.setAttribute('aria-hidden', 'true');
+        }
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+        content.style.height = content.scrollHeight + 'px';
+        button.setAttribute('aria-expanded', 'true');
+        content.setAttribute('aria-hidden', 'false');
+      } else {
+        item.classList.remove('active');
+        content.style.height = '0';
+        button.setAttribute('aria-expanded', 'false');
+        content.setAttribute('aria-hidden', 'true');
+      }
+    });
+  }
+
+  initFAQAccordion();
+  document.addEventListener('astro:after-swap', initFAQAccordion);
+</script>
