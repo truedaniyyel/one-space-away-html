@@ -7,12 +7,18 @@ body {
 }
 
 section {
-  padding: var(--px-112) var(--px-64);
+  padding: var(--px-96) var(--px-64);
 }
 
 p {
   line-height: 1.6;
   opacity: 0.8;
+}
+
+.section-container {
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
 }
 
 .section-tag {
@@ -160,6 +166,18 @@ p {
 
   .text-link:hover {
     text-decoration-color: transparent;
+  }
+}
+
+@media (min-width: 120rem) {
+  .section-container {
+    max-width: 90rem;
+  }
+}
+
+@media (min-width: 90.063rem) {
+  .section-container {
+    max-width: 83.5rem;
   }
 }
 

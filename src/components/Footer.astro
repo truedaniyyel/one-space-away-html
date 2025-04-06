@@ -6,7 +6,7 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer class="main-footer">
-  <div class="footer footer-primary">
+  <div class="section-container footer footer-primary">
     <div class="footer-brand">
       <a href="/" class="headline logo" aria-label="One Space Away home">
         One Space Away
@@ -108,36 +108,29 @@ const currentYear = new Date().getFullYear();
     transition: all var(--transition-short);
   }
 
-  @media (hover: hover) and (pointer: fine) {
-    a:hover {
-      color: var(--color-text-primary);
-    }
-  }
-
   a:active {
     color: var(--color-text-primary);
+  }
+
+  .main-footer {
+    background-color: var(--color-background);
+    padding-block: var(--px-112) var(--px-28);
+    padding-inline: var(--px-64);
+    color: var(--color-text-dark);
+    font-size: var(--text-sm);
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
   }
 
   .headline {
     color: var(--color-text-primary);
   }
 
-  .main-footer {
-    background-color: var(--color-background);
-    padding-top: var(--px-112);
-    padding-bottom: var(--px-28);
-    color: var(--color-text-dark);
-    font-size: var(--text-sm);
-  }
-
   .main-footer p {
     opacity: 1;
-  }
-
-  .footer {
-    margin-inline: var(--px-64);
-    display: flex;
-    justify-content: space-between;
   }
 
   .footer-primary {
@@ -196,6 +189,12 @@ const currentYear = new Date().getFullYear();
 
   .footer-secondary {
     font-weight: 500;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    a:hover {
+      color: var(--color-text-primary);
+    }
   }
 
   @media screen and (max-width: 64rem) {
