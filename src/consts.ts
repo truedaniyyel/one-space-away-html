@@ -7,7 +7,7 @@ export const SITE: Site = {
   DESCRIPTION: 'Discover the joy of living in a space that feels truly yours.',
   CANONICAL_URL: import.meta.env.DEV
     ? 'http://localhost:4321'
-    : 'https://one-space-away.pages.dev',
+    : 'https://one-space-away-html.pages.dev',
   LOCALE: 'en',
   TELEPHONE: '(310) 555-2389',
   EMAIL: 'info@onespaceaway.com',
