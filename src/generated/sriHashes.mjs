@@ -16,7 +16,7 @@ export const inlineStyleHashes = /** @type {string[]} */ ([
 export const extScriptHashes = /** @type {string[]} */ ([
 	'sha256-AFy86Cu6U6Eehe4j8C1BPYQVNwjqPEYajrsixXlqEy0=',
 	'sha256-IRn0fOjNAmRtt40co7w8RZvRUAYVQAQN0aRg9lX+vgk=',
-	'sha256-KRspqAm0WB2mS/6jmbb6zs7QuE6ZpxORnumEbQ0t7vY=',
+	'sha256-N8ZkHrPtNWZvFu5U2Ft6lukv7xwd/pJkE/rmMNEzcs0=',
 	'sha256-b0f8wkSr0hUjerK49/UVzsaLCWQzBNLMw/tUkp5/k8s=',
 ])
 
@@ -65,7 +65,7 @@ export const perPageSriHashes =
 				'sha256-AFy86Cu6U6Eehe4j8C1BPYQVNwjqPEYajrsixXlqEy0=',
 				'sha256-AVbNo/NUrJoMekF8mcUUaoxaZWPNK1VUZckItL07t6c=',
 				'sha256-IRn0fOjNAmRtt40co7w8RZvRUAYVQAQN0aRg9lX+vgk=',
-				'sha256-KRspqAm0WB2mS/6jmbb6zs7QuE6ZpxORnumEbQ0t7vY=',
+				'sha256-N8ZkHrPtNWZvFu5U2Ft6lukv7xwd/pJkE/rmMNEzcs0=',
 				'sha256-TZBgGdjpMz11oK10pQylNmVkQ+6cJ11IS0i1AM7sn2w=',
 				'sha256-j5sZqFOdVXkdnkgbuLPDk8tkHlvTQky3bV+tvWDIsks=',
 			],
@@ -80,7 +80,7 @@ export const perResourceSriHashes = {
 	scripts: /** @type {Record<string,string>} */ ({
 		'/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CMTcOisY.js': 'sha256-IRn0fOjNAmRtt40co7w8RZvRUAYVQAQN0aRg9lX+vgk=',
 		'/_astro/PortfolioSection.astro_astro_type_script_index_0_lang.C9KMlNTx.js': 'sha256-AFy86Cu6U6Eehe4j8C1BPYQVNwjqPEYajrsixXlqEy0=',
-		'/_astro/TestimonialsSection.astro_astro_type_script_index_0_lang.pbzmM_KV.js': 'sha256-KRspqAm0WB2mS/6jmbb6zs7QuE6ZpxORnumEbQ0t7vY=',
+		'/_astro/TestimonialsSection.astro_astro_type_script_index_0_lang.CyZ50AEn.js': 'sha256-N8ZkHrPtNWZvFu5U2Ft6lukv7xwd/pJkE/rmMNEzcs0=',
 		'/_astro/initSwiper.CIzc6jQW.js': 'sha256-b0f8wkSr0hUjerK49/UVzsaLCWQzBNLMw/tUkp5/k8s=',
 	}),
 	styles: /** @type {Record<string,string>} */ ({

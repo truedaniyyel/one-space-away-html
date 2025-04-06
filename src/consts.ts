@@ -9,9 +9,9 @@ export const SITE: Site = {
     ? 'http://localhost:4321'
     : 'https://one-space-away.pages.dev',
   LOCALE: 'en',
-  TELEPHONE: '(893) 220-8681',
+  TELEPHONE: '(310) 555-2389',
   EMAIL: 'info@onespaceaway.com',
-  ADDRESS: '135 Junction Road, London N19 5PX, United Kingdom',
+  ADDRESS: '456 Camden Drive, Suite 300, Beverly Hills, CA 90210',
 
   OG_IMAGE: '/og-image.webp',
 
