@@ -25,7 +25,7 @@ async function generateCSPHeader() {
           .map(hash => `'${hash}'`)
           .join(' ')}`,
         "connect-src 'self'",
-        `style-src 'self'${Array.from(styleHashes)
+        `style-src 'self' ${Array.from(styleHashes)
           .map(hash => `'${hash}'`)
           .join(' ')}`,
         "base-uri 'self'",
