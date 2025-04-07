@@ -191,6 +191,10 @@ p {
   section {
     padding: var(--px-80) var(--px-28);
   }
+
+  .section-title {
+    line-height: 1.3;
+  }
 }
 
 @media screen and (max-width: 42.188rem) {

@@ -1,9 +1,10 @@
 ---
-import '@styles/_fonts.css';
 import '@styles/_variables.css';
 import '@styles/_reset.css';
 import '@styles/global.css';
 
+import { join } from 'node:path';
+import { AstroFont } from 'astro-font';
 import { SITE, SOCIALS } from '@consts';
 import { ClientRouter } from 'astro:transitions';
 import Header from 'components/Header.astro';
@@ -57,12 +58,28 @@ const schemaData = {
     <link rel="canonical" href={canonicalURL} />
 
     <!-- Preload fonts -->
-    <link
-      rel="preload"
-      href="/fonts/DMSans-VariableFont_opsz,wght-subset.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
+    <AstroFont
+      config={[
+        {
+          name: 'DMSans',
+          src: [
+            {
+              style: 'normal',
+              weight: '100 900',
+              path: join(
+                process.cwd(),
+                'public',
+                'fonts',
+                'DMSans-VariableFont_opsz,wght-subset.woff2'
+              ),
+            },
+          ],
+          preload: true,
+          display: 'swap',
+          selector: 'body',
+          fallback: 'sans-serif',
+        },
+      ]}
     />
 
     <meta name="generator" content={Astro.generator} />

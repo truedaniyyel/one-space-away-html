@@ -120,10 +120,6 @@ import { SITE } from '@consts';
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-info"
                 ><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"
                 ></path><path d="M12 8h.01"></path></svg
               >
@@ -140,6 +136,7 @@ import { SITE } from '@consts';
       <div class="contact-map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52871.78694097431!2d-118.44073380549868!3d34.0826707144581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc04d6d147ab%3A0xd6c7c379fd081ed1!2sBeverly%20Hills%2C%20CA%2C%20USA!5e0!3m2!1sen!2spl!4v1743960669502!5m2!1sen!2spl"
+          title="Map showing location of Beverly Hills, California, USA"
           width="600"
           height="450"
           style="border:0;"
@@ -257,6 +254,9 @@ import { SITE } from '@consts';
     display: inline;
     width: var(--text-base);
     margin-bottom: var(--px-2);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
   .contact-subtitle {
