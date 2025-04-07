@@ -10,10 +10,10 @@ export const inlineScriptHashes = /** @type {string[]} */ ([
 ])
 
 export const inlineStyleHashes = /** @type {string[]} */ ([
-	'sha256-Laodm90TOAC0DC42fMnzFC5oe+veg2mMCSYn/m6rB/8=',
-	'sha256-VaiF0Usm3O8dif+lGEILhDtW8CWiPOQJDVnX9evVV0w=',
-	'sha256-Z21X53H/CFNw+A0Wz+P3epTAAsPvBmr+68zKAsIZzSQ=',
-	'sha256-aVONWDf76k5WiPHq6css78ZyDbaXCJSG5IsqEjJ0fx8=',
+	'sha256-3JNXvgIQSgTVKokCOPKmktv6elWKkx+NodtfevdKU1A=',
+	'sha256-eRL5npsj3xrf1Nu7Kz99jUkClsqV6HlV8YPdy25yoMw=',
+	'sha256-jicw3yHhhAjrkk0xth63hUkx8xxorbD7lcIJH/FajF0=',
+	'sha256-lQMj7BtqQMETzp87umMJIYwWabX+CfJQA1/cLd52xco=',
 	'sha256-wsNStdb68JwcU5tDQKh8QKoAVXQJ972jPZrUjv/0OLI=',
 ])
 
@@ -38,7 +38,7 @@ export const perPageSriHashes =
 				'sha256-cgYXg45jQyjXKtgd9wbS1hBCPdT8FC8czqSn73TiBTQ=',
 			],
 			styles: [
-				'sha256-aVONWDf76k5WiPHq6css78ZyDbaXCJSG5IsqEjJ0fx8=',
+				'sha256-lQMj7BtqQMETzp87umMJIYwWabX+CfJQA1/cLd52xco=',
 				'sha256-qHQH0/l8bvdOnKdvEopmx2lBaPkw8/C3hx0+uyDTvYI=',
 				'sha256-wsNStdb68JwcU5tDQKh8QKoAVXQJ972jPZrUjv/0OLI=',
 			],
@@ -50,7 +50,7 @@ export const perPageSriHashes =
 				'sha256-jHZEXQqVhZFPso+5kXVA0zAifxxKdJFoQG7beIWPDLI=',
 			],
 			styles: [
-				'sha256-VaiF0Usm3O8dif+lGEILhDtW8CWiPOQJDVnX9evVV0w=',
+				'sha256-eRL5npsj3xrf1Nu7Kz99jUkClsqV6HlV8YPdy25yoMw=',
 				'sha256-qHQH0/l8bvdOnKdvEopmx2lBaPkw8/C3hx0+uyDTvYI=',
 				'sha256-wsNStdb68JwcU5tDQKh8QKoAVXQJ972jPZrUjv/0OLI=',
 			],
@@ -62,7 +62,7 @@ export const perPageSriHashes =
 				'sha256-ah+FxXIQ+k2iKGPZR0kB9rkgcWbIo4FL8uuLg125jls=',
 			],
 			styles: [
-				'sha256-Z21X53H/CFNw+A0Wz+P3epTAAsPvBmr+68zKAsIZzSQ=',
+				'sha256-jicw3yHhhAjrkk0xth63hUkx8xxorbD7lcIJH/FajF0=',
 				'sha256-qHQH0/l8bvdOnKdvEopmx2lBaPkw8/C3hx0+uyDTvYI=',
 				'sha256-wsNStdb68JwcU5tDQKh8QKoAVXQJ972jPZrUjv/0OLI=',
 			],
@@ -77,7 +77,7 @@ export const perPageSriHashes =
 				'sha256-zCgxzkldH6bfz5ohHJ8kxcWJh737/25PSN9HHFvUNpE=',
 			],
 			styles: [
-				'sha256-Laodm90TOAC0DC42fMnzFC5oe+veg2mMCSYn/m6rB/8=',
+				'sha256-3JNXvgIQSgTVKokCOPKmktv6elWKkx+NodtfevdKU1A=',
 				'sha256-ZCO1dhdl6kAP6gGbwnAfno5KUf7f99hyGI0Rq1zwdWg=',
 				'sha256-qHQH0/l8bvdOnKdvEopmx2lBaPkw8/C3hx0+uyDTvYI=',
 			],
