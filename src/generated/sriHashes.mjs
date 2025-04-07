@@ -10,11 +10,11 @@ export const inlineScriptHashes = /** @type {string[]} */ ([
 ])
 
 export const inlineStyleHashes = /** @type {string[]} */ ([
-	'sha256-Jgqyr8wtkUOMKrg3Y72Fl4UDNs1QKcTwhzsBSlAf5qU=',
-	'sha256-d7uUf847pkGadU93WPh30fnO7mqNSct6eNabI9i+rmw=',
-	'sha256-uai0S7YxNdv18CB4KrEa1K0AbKeThigmOuqQYqAEut8=',
+	'sha256-OXnjXcqnTiJQkkVMNrZLtZdJGLpt2wgN6m65ODMbMY4=',
+	'sha256-Q/3ya7Pieuyb13PWGNfBZtpKkA7Nl6G32xPAIFjv+D0=',
+	'sha256-lVU/S4soOdYpxvPSd3H4Q4LsyjCXaF5nKSokDWpEX6o=',
+	'sha256-wL37p+kjdcRfdh0ZZ1Zt47ZAa7aXvwNpzqrLgiJiKGI=',
 	'sha256-wsNStdb68JwcU5tDQKh8QKoAVXQJ972jPZrUjv/0OLI=',
-	'sha256-xbOpu6hZzYgnEuMtZjiDvcfd23MihFKS+I33hBI5cN8=',
 ])
 
 export const extScriptHashes = /** @type {string[]} */ ([
@@ -38,8 +38,8 @@ export const perPageSriHashes =
 				'sha256-cgYXg45jQyjXKtgd9wbS1hBCPdT8FC8czqSn73TiBTQ=',
 			],
 			styles: [
+				'sha256-Q/3ya7Pieuyb13PWGNfBZtpKkA7Nl6G32xPAIFjv+D0=',
 				'sha256-qHQH0/l8bvdOnKdvEopmx2lBaPkw8/C3hx0+uyDTvYI=',
-				'sha256-uai0S7YxNdv18CB4KrEa1K0AbKeThigmOuqQYqAEut8=',
 				'sha256-wsNStdb68JwcU5tDQKh8QKoAVXQJ972jPZrUjv/0OLI=',
 			],
 		},
@@ -50,7 +50,7 @@ export const perPageSriHashes =
 				'sha256-jHZEXQqVhZFPso+5kXVA0zAifxxKdJFoQG7beIWPDLI=',
 			],
 			styles: [
-				'sha256-d7uUf847pkGadU93WPh30fnO7mqNSct6eNabI9i+rmw=',
+				'sha256-OXnjXcqnTiJQkkVMNrZLtZdJGLpt2wgN6m65ODMbMY4=',
 				'sha256-qHQH0/l8bvdOnKdvEopmx2lBaPkw8/C3hx0+uyDTvYI=',
 				'sha256-wsNStdb68JwcU5tDQKh8QKoAVXQJ972jPZrUjv/0OLI=',
 			],
@@ -62,9 +62,9 @@ export const perPageSriHashes =
 				'sha256-ah+FxXIQ+k2iKGPZR0kB9rkgcWbIo4FL8uuLg125jls=',
 			],
 			styles: [
+				'sha256-lVU/S4soOdYpxvPSd3H4Q4LsyjCXaF5nKSokDWpEX6o=',
 				'sha256-qHQH0/l8bvdOnKdvEopmx2lBaPkw8/C3hx0+uyDTvYI=',
 				'sha256-wsNStdb68JwcU5tDQKh8QKoAVXQJ972jPZrUjv/0OLI=',
-				'sha256-xbOpu6hZzYgnEuMtZjiDvcfd23MihFKS+I33hBI5cN8=',
 			],
 		},
 		'index.html': {
@@ -77,9 +77,9 @@ export const perPageSriHashes =
 				'sha256-zCgxzkldH6bfz5ohHJ8kxcWJh737/25PSN9HHFvUNpE=',
 			],
 			styles: [
-				'sha256-Jgqyr8wtkUOMKrg3Y72Fl4UDNs1QKcTwhzsBSlAf5qU=',
 				'sha256-ZCO1dhdl6kAP6gGbwnAfno5KUf7f99hyGI0Rq1zwdWg=',
 				'sha256-qHQH0/l8bvdOnKdvEopmx2lBaPkw8/C3hx0+uyDTvYI=',
+				'sha256-wL37p+kjdcRfdh0ZZ1Zt47ZAa7aXvwNpzqrLgiJiKGI=',
 			],
 		}}
 )
