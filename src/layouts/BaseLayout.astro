@@ -127,10 +127,31 @@ const schemaData = {
     }
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
     <Header />
-    <main>
+    <main id="main" tabindex="-1">
       <slot />
     </main>
     <Footer />
   </body>
 </html>
+
+<style>
+  .skip-link {
+    position: absolute;
+    top: var(--px-10);
+    left: var(--px-8);
+    padding: var(--px-12) var(--px-16);
+    border-radius: var(--px-6);
+    color: white;
+    background: #000;
+    z-index: 1001;
+    opacity: 0;
+    transition: opacity var(--transition-short);
+  }
+
+  .skip-link:focus {
+    opacity: 1;
+  }
+</style>

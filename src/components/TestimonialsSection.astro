@@ -153,6 +153,10 @@ const testimonials = [
     max-height: 34.375rem;
   }
 
+  .testimonial-card:has(.testimonial-video:focus-visible) {
+    overflow: visible;
+  }
+
   .testimonial-header {
     display: flex;
     align-items: center;
@@ -221,6 +225,12 @@ const testimonials = [
 
   .testimonials-swiper.-non-slider .swiper-pagination {
     display: none;
+  }
+
+  @media (hover: none), (pointer: coarse) {
+    .video-control {
+      display: none;
+    }
   }
 
   @media (hover: hover) and (pointer: fine) {

@@ -12,13 +12,13 @@ export const inlineScriptHashes = /** @type {string[]} */ ([
 ])
 
 export const inlineStyleHashes = /** @type {string[]} */ ([
-	'sha256-0zhlr3PC1cluX4Weqy3DHq+2zLvitR+bFVgG4ugcLGE=',
-	'sha256-263UJtW5NK7J/iUBNWJ0gySsB6VvFSQdaE0YWNyL2bI=',
-	'sha256-6DtSp5M384geRwC2bQfwLiUOMDZA7Cb3IkZbOA9tTh8=',
-	'sha256-AIHqyK7Y5qO16DLlszqxQ2bpcuS4j/54gee2v2Rmdfs=',
-	'sha256-POLCWUHpqQxIek9GW+QM+7jVCEthAlznZ0ReryQ+fsU=',
-	'sha256-gSVz/qFRAUUjwbkqFAH60rUQssu7wTWGGBLai0SGd9o=',
+	'sha256-+e9EJxUDHHOybIhosEe4wuZP55yyva+7/BtvyCz9haQ=',
+	'sha256-6EjK3V22r7HwN4E2HGb1BHY23ufbmsU2GdFWcMOaSXs=',
+	'sha256-EaDouxMhXIxKznyntdmoZYXb08igW4E7S3xb0MdyURM=',
+	'sha256-S/Pi2xApfLnvIeL1d8FXDmnI0sdKT95wQXPRCbabes8=',
+	'sha256-i0DanhR9mIpTqmLPEuOR2AOup9wxEE4WCWU1/UyPiwY=',
 	'sha256-igs+wKvqFBmTsYqNb95affuxoj9Yhaj4/6bSiFjntgM=',
+	'sha256-tyyCpIbAh7QZJ8P4TkCilyBCJvq6dRrU10qFS/eoJjg=',
 	'sha256-wsNStdb68JwcU5tDQKh8QKoAVXQJ972jPZrUjv/0OLI=',
 ])
 
@@ -30,8 +30,8 @@ export const extScriptHashes = /** @type {string[]} */ ([
 ])
 
 export const extStyleHashes = /** @type {string[]} */ ([
-	'sha256-ZCO1dhdl6kAP6gGbwnAfno5KUf7f99hyGI0Rq1zwdWg=',
-	'sha256-uU7jIB/mRnawNG1wMDK8s/4O0D0bLO1jUUGpNcfFRjo=',
+	'sha256-tzsiTl/j9GF9x18WB0gbes3igo1HdIzrosKNZNNd/Js=',
+	'sha256-y8YewS4aqdXwYbdpiit6OMW0gK816xErxKoS47vONdE=',
 ])
 
 export const perPageSriHashes =
@@ -43,9 +43,9 @@ export const perPageSriHashes =
 				'sha256-cgYXg45jQyjXKtgd9wbS1hBCPdT8FC8czqSn73TiBTQ=',
 			],
 			styles: [
-				'sha256-gSVz/qFRAUUjwbkqFAH60rUQssu7wTWGGBLai0SGd9o=',
-				'sha256-uU7jIB/mRnawNG1wMDK8s/4O0D0bLO1jUUGpNcfFRjo=',
+				'sha256-+e9EJxUDHHOybIhosEe4wuZP55yyva+7/BtvyCz9haQ=',
 				'sha256-wsNStdb68JwcU5tDQKh8QKoAVXQJ972jPZrUjv/0OLI=',
+				'sha256-y8YewS4aqdXwYbdpiit6OMW0gK816xErxKoS47vONdE=',
 			],
 		},
 		'500.html': {
@@ -55,9 +55,9 @@ export const perPageSriHashes =
 				'sha256-jHZEXQqVhZFPso+5kXVA0zAifxxKdJFoQG7beIWPDLI=',
 			],
 			styles: [
-				'sha256-6DtSp5M384geRwC2bQfwLiUOMDZA7Cb3IkZbOA9tTh8=',
-				'sha256-uU7jIB/mRnawNG1wMDK8s/4O0D0bLO1jUUGpNcfFRjo=',
+				'sha256-S/Pi2xApfLnvIeL1d8FXDmnI0sdKT95wQXPRCbabes8=',
 				'sha256-wsNStdb68JwcU5tDQKh8QKoAVXQJ972jPZrUjv/0OLI=',
+				'sha256-y8YewS4aqdXwYbdpiit6OMW0gK816xErxKoS47vONdE=',
 			],
 		},
 		'503/index.html': {
@@ -67,9 +67,9 @@ export const perPageSriHashes =
 				'sha256-ah+FxXIQ+k2iKGPZR0kB9rkgcWbIo4FL8uuLg125jls=',
 			],
 			styles: [
-				'sha256-0zhlr3PC1cluX4Weqy3DHq+2zLvitR+bFVgG4ugcLGE=',
-				'sha256-uU7jIB/mRnawNG1wMDK8s/4O0D0bLO1jUUGpNcfFRjo=',
+				'sha256-EaDouxMhXIxKznyntdmoZYXb08igW4E7S3xb0MdyURM=',
 				'sha256-wsNStdb68JwcU5tDQKh8QKoAVXQJ972jPZrUjv/0OLI=',
+				'sha256-y8YewS4aqdXwYbdpiit6OMW0gK816xErxKoS47vONdE=',
 			],
 		},
 		'index.html': {
@@ -82,9 +82,9 @@ export const perPageSriHashes =
 				'sha256-zCgxzkldH6bfz5ohHJ8kxcWJh737/25PSN9HHFvUNpE=',
 			],
 			styles: [
-				'sha256-AIHqyK7Y5qO16DLlszqxQ2bpcuS4j/54gee2v2Rmdfs=',
-				'sha256-ZCO1dhdl6kAP6gGbwnAfno5KUf7f99hyGI0Rq1zwdWg=',
-				'sha256-uU7jIB/mRnawNG1wMDK8s/4O0D0bLO1jUUGpNcfFRjo=',
+				'sha256-i0DanhR9mIpTqmLPEuOR2AOup9wxEE4WCWU1/UyPiwY=',
+				'sha256-tzsiTl/j9GF9x18WB0gbes3igo1HdIzrosKNZNNd/Js=',
+				'sha256-y8YewS4aqdXwYbdpiit6OMW0gK816xErxKoS47vONdE=',
 			],
 		},
 		'legal/privacy/index.html': {
@@ -94,9 +94,9 @@ export const perPageSriHashes =
 				'sha256-ah+FxXIQ+k2iKGPZR0kB9rkgcWbIo4FL8uuLg125jls=',
 			],
 			styles: [
-				'sha256-POLCWUHpqQxIek9GW+QM+7jVCEthAlznZ0ReryQ+fsU=',
 				'sha256-igs+wKvqFBmTsYqNb95affuxoj9Yhaj4/6bSiFjntgM=',
-				'sha256-uU7jIB/mRnawNG1wMDK8s/4O0D0bLO1jUUGpNcfFRjo=',
+				'sha256-tyyCpIbAh7QZJ8P4TkCilyBCJvq6dRrU10qFS/eoJjg=',
+				'sha256-y8YewS4aqdXwYbdpiit6OMW0gK816xErxKoS47vONdE=',
 			],
 		},
 		'legal/terms/index.html': {
@@ -106,9 +106,9 @@ export const perPageSriHashes =
 				'sha256-ionbH/MHsAD+NuEPNEhHLB/jF09afC1EdipjyxC5ZOU=',
 			],
 			styles: [
-				'sha256-263UJtW5NK7J/iUBNWJ0gySsB6VvFSQdaE0YWNyL2bI=',
+				'sha256-6EjK3V22r7HwN4E2HGb1BHY23ufbmsU2GdFWcMOaSXs=',
 				'sha256-igs+wKvqFBmTsYqNb95affuxoj9Yhaj4/6bSiFjntgM=',
-				'sha256-uU7jIB/mRnawNG1wMDK8s/4O0D0bLO1jUUGpNcfFRjo=',
+				'sha256-y8YewS4aqdXwYbdpiit6OMW0gK816xErxKoS47vONdE=',
 			],
 		}}
 )
@@ -121,7 +121,7 @@ export const perResourceSriHashes = {
 		'/_astro/initSwiper.VPX6y0en.js': 'sha256-fLpXueewo49m443rbLHU8+yrO2deSJ+x3Dsn3xWe+P8=',
 	}),
 	styles: /** @type {Record<string,string>} */ ({
-		'/_astro/503.B7hqSz5Z.css': 'sha256-uU7jIB/mRnawNG1wMDK8s/4O0D0bLO1jUUGpNcfFRjo=',
-		'/_astro/index.oV15oxBT.css': 'sha256-ZCO1dhdl6kAP6gGbwnAfno5KUf7f99hyGI0Rq1zwdWg=',
+		'/_astro/503.CQN9PCtG.css': 'sha256-y8YewS4aqdXwYbdpiit6OMW0gK816xErxKoS47vONdE=',
+		'/_astro/index.BGHRXd2G.css': 'sha256-tzsiTl/j9GF9x18WB0gbes3igo1HdIzrosKNZNNd/Js=',
 	}),
 }
