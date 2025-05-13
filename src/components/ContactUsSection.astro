@@ -129,6 +129,9 @@ import { SITE } from '@consts';
             <a class="text-link" href="legal/privacy">Privacy Policy</a>.
           </div>
         </div>
+        <div id="form-feedback" class="form-feedback" hidden>
+          <p>Thank you! Your Message has been sent</p>
+        </div>
       </form>
 
       <div class="contact-map">
@@ -241,6 +244,24 @@ import { SITE } from '@consts';
     gap: var(--px-16);
     align-items: center;
     justify-content: space-between;
+  }
+
+  .form-feedback {
+    margin-top: var(--px-24);
+    color: #006600;
+    font-weight: 500;
+    animation: var(--transition-long);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .contact-terms {
@@ -358,3 +379,35 @@ import { SITE } from '@consts';
     }
   }
 </style>
+
+<script>
+  document
+    .querySelector('.contact-form')
+    ?.addEventListener('submit', async e => {
+      e.preventDefault();
+
+      const form = e.target as HTMLFormElement;
+      const feedback = document.getElementById('form-feedback');
+      const submitButton = form.querySelector(
+        'button[type="submit"]'
+      ) as HTMLButtonElement;
+
+      if (!feedback || !submitButton) return;
+
+      submitButton.disabled = true;
+      const originalText = submitButton.textContent;
+      submitButton.textContent = 'SENDING...';
+
+      await new Promise(resolve => setTimeout(resolve, 1500));
+
+      feedback.hidden = false;
+
+      form.reset();
+      submitButton.textContent = originalText;
+      submitButton.disabled = false;
+
+      setTimeout(() => {
+        feedback.hidden = true;
+      }, 4000);
+    });
+</script>
