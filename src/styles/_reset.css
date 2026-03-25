@@ -9,10 +9,10 @@
 ::before,
 ::backdrop,
 ::file-selector-button {
-  box-sizing: border-box; /* 1 */
-  margin: 0; /* 2 */
-  padding: 0; /* 2 */
-  border: 0 solid; /* 3 */
+    box-sizing: border-box; /* 1 */
+    margin: 0; /* 2 */
+    padding: 0; /* 2 */
+    border: 0 solid; /* 3 */
 }
 
 /*
@@ -27,18 +27,19 @@
 
 html,
 :host {
-  line-height: var(--leading-body); /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-  tab-size: 4; /* 3 */
-  font-family:
-    var(--font-primary), Helvetica, ui-sans-serif, system-ui, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; /* 4 */
-  font-feature-settings: var(--default-font-feature-settings, normal); /* 5 */
-  font-variation-settings: var(
-    --default-font-variation-settings,
-    normal
-  ); /* 6 */
-  -webkit-tap-highlight-color: transparent; /* 7 */
+    line-height: var(--leading-body); /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    tab-size: 4; /* 3 */
+    font-family:
+        var(--font-dm-sans), Helvetica, ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji"; /* 4 */
+    font-feature-settings: var(--default-font-feature-settings, normal); /* 5 */
+    font-variation-settings: var(
+        --default-font-variation-settings,
+        normal
+    ); /* 6 */
+    -webkit-tap-highlight-color: transparent; /* 7 */
 }
 
 /*
@@ -46,7 +47,7 @@ html,
 */
 
 body {
-  line-height: inherit;
+    line-height: inherit;
 }
 
 /*
@@ -56,9 +57,9 @@ body {
 */
 
 hr {
-  height: 0; /* 1 */
-  color: inherit; /* 2 */
-  border-top-width: 1px; /* 3 */
+    height: 0; /* 1 */
+    color: inherit; /* 2 */
+    border-top-width: 1px; /* 3 */
 }
 
 /*
@@ -66,8 +67,8 @@ hr {
 */
 
 abbr:where([title]) {
-  -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
 }
 
 /*
@@ -80,8 +81,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: inherit;
-  font-weight: inherit;
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 /*
@@ -89,9 +90,9 @@ h6 {
 */
 
 a {
-  color: inherit;
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
 }
 
 /*
@@ -100,7 +101,7 @@ a {
 
 b,
 strong {
-  font-weight: bolder;
+    font-weight: bolder;
 }
 
 /*
@@ -114,18 +115,18 @@ code,
 kbd,
 samp,
 pre {
-  font-family:
-    var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    'Liberation Mono', 'Courier New', monospace; /* 1 */
-  font-feature-settings: var(
-    --default-mono-font-feature-settings,
-    normal
-  ); /* 2 */
-  font-variation-settings: var(
-    --default-mono-font-variation-settings,
-    normal
-  ); /* 3 */
-  font-size: 1em; /* 4 */
+    font-family:
+        var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace; /* 1 */
+    font-feature-settings: var(
+        --default-mono-font-feature-settings,
+        normal
+    ); /* 2 */
+    font-variation-settings: var(
+        --default-mono-font-variation-settings,
+        normal
+    ); /* 3 */
+    font-size: 1em; /* 4 */
 }
 
 /*
@@ -133,7 +134,7 @@ pre {
 */
 
 small {
-  font-size: 80%;
+    font-size: 80%;
 }
 
 /*
@@ -142,18 +143,18 @@ small {
 
 sub,
 sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
 
 sub {
-  bottom: -0.25em;
+    bottom: -0.25em;
 }
 
 sup {
-  top: -0.5em;
+    top: -0.5em;
 }
 
 /*
@@ -163,21 +164,21 @@ sup {
 */
 
 table {
-  text-indent: 0; /* 1 */
-  border-color: inherit; /* 2 */
-  border-collapse: collapse; /* 3 */
-  font-family:
-    var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    'Liberation Mono', 'Courier New', monospace; /* 4 */
-  font-feature-settings: var(
-    --default-mono-font-feature-settings,
-    normal
-  ); /* 5 */
-  font-variation-settings: var(
-    --default-mono-font-variation-settings,
-    normal
-  ); /* 6 */
-  font-size: 1em; /* 4 */
+    text-indent: 0; /* 1 */
+    border-color: inherit; /* 2 */
+    border-collapse: collapse; /* 3 */
+    font-family:
+        var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace; /* 4 */
+    font-feature-settings: var(
+        --default-mono-font-feature-settings,
+        normal
+    ); /* 5 */
+    font-variation-settings: var(
+        --default-mono-font-variation-settings,
+        normal
+    ); /* 6 */
+    font-size: 1em; /* 4 */
 }
 
 /*
@@ -185,7 +186,7 @@ table {
 */
 
 :-moz-focusring {
-  outline: auto;
+    outline: auto;
 }
 
 /*
@@ -193,7 +194,7 @@ table {
 */
 
 progress {
-  vertical-align: baseline;
+    vertical-align: baseline;
 }
 
 /*
@@ -201,7 +202,7 @@ progress {
 */
 
 summary {
-  display: list-item;
+    display: list-item;
 }
 
 /*
@@ -211,7 +212,7 @@ summary {
 ol,
 ul,
 menu {
-  list-style: none;
+    list-style: none;
 }
 
 /*
@@ -228,8 +229,8 @@ audio,
 iframe,
 embed,
 object {
-  display: block; /* 1 */
-  vertical-align: middle; /* 2 */
+    display: block; /* 1 */
+    vertical-align: middle; /* 2 */
 }
 
 /*
@@ -238,8 +239,8 @@ object {
 
 img,
 video {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 /*
@@ -255,14 +256,14 @@ select,
 optgroup,
 textarea,
 ::file-selector-button {
-  font: inherit; /* 1 */
-  font-feature-settings: inherit; /* 1 */
-  font-variation-settings: inherit; /* 1 */
-  letter-spacing: inherit; /* 1 */
-  color: inherit; /* 1 */
-  border-radius: 0; /* 2 */
-  background-color: transparent; /* 3 */
-  opacity: 1; /* 4 */
+    font: inherit; /* 1 */
+    font-feature-settings: inherit; /* 1 */
+    font-variation-settings: inherit; /* 1 */
+    letter-spacing: inherit; /* 1 */
+    color: inherit; /* 1 */
+    border-radius: 0; /* 2 */
+    background-color: transparent; /* 3 */
+    opacity: 1; /* 4 */
 }
 
 /*
@@ -270,7 +271,7 @@ textarea,
 */
 
 :where(select:is([multiple], [size])) optgroup {
-  font-weight: bolder;
+    font-weight: bolder;
 }
 
 /*
@@ -278,7 +279,7 @@ textarea,
 */
 
 :where(select:is([multiple], [size])) optgroup option {
-  padding-inline-start: 20px;
+    padding-inline-start: 20px;
 }
 
 /*
@@ -286,7 +287,7 @@ textarea,
 */
 
 ::file-selector-button {
-  margin-inline-end: 4px;
+    margin-inline-end: 4px;
 }
 
 /*
@@ -295,8 +296,8 @@ textarea,
 */
 
 ::placeholder {
-  opacity: 1; /* 1 */
-  color: color-mix(in oklab, currentColor 50%, transparent); /* 2 */
+    opacity: 1; /* 1 */
+    color: color-mix(in oklab, currentColor 50%, transparent); /* 2 */
 }
 
 /*
@@ -304,7 +305,7 @@ textarea,
 */
 
 textarea {
-  resize: vertical;
+    resize: vertical;
 }
 
 /*
@@ -312,7 +313,7 @@ textarea {
 */
 
 ::-webkit-search-decoration {
-  -webkit-appearance: none;
+    -webkit-appearance: none;
 }
 
 /*
@@ -321,8 +322,8 @@ textarea {
 */
 
 ::-webkit-date-and-time-value {
-  min-height: 1lh; /* 1 */
-  text-align: inherit; /* 2 */
+    min-height: 1lh; /* 1 */
+    text-align: inherit; /* 2 */
 }
 
 /*
@@ -330,7 +331,7 @@ textarea {
 */
 
 ::-webkit-datetime-edit {
-  display: inline-flex;
+    display: inline-flex;
 }
 
 /*
@@ -338,7 +339,7 @@ textarea {
 */
 
 ::-webkit-datetime-edit-fields-wrapper {
-  padding: 0;
+    padding: 0;
 }
 
 ::-webkit-datetime-edit,
@@ -350,7 +351,7 @@ textarea {
 ::-webkit-datetime-edit-second-field,
 ::-webkit-datetime-edit-millisecond-field,
 ::-webkit-datetime-edit-meridiem-field {
-  padding-block: 0;
+    padding-block: 0;
 }
 
 /*
@@ -358,7 +359,7 @@ textarea {
 */
 
 :-moz-ui-invalid {
-  box-shadow: none;
+    box-shadow: none;
 }
 
 /*
@@ -366,9 +367,9 @@ textarea {
 */
 
 button,
-input:where([type='button'], [type='reset'], [type='submit']),
+input:where([type="button"], [type="reset"], [type="submit"]),
 ::file-selector-button {
-  appearance: button;
+    appearance: button;
 }
 
 /*
@@ -377,13 +378,13 @@ input:where([type='button'], [type='reset'], [type='submit']),
 
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
-  height: auto;
+    height: auto;
 }
 
 /*
   Make elements with the HTML hidden attribute stay hidden by default.
 */
 
-[hidden]:where(:not([hidden='until-found'])) {
-  display: none !important;
+[hidden]:where(:not([hidden="until-found"])) {
+    display: none !important;
 }

@@ -1,336 +1,346 @@
 <header id="header" class="header">
-  <div class="mobile-overlay"></div>
-  <nav
-    class="section-container nav-container"
-    role="navigation"
-    aria-label="Main navigation"
-  >
-    <div class="logo-container">
-      <a href="/" class="logo" aria-label="One Space Away home">
-        One Space Away
-      </a>
-    </div>
+    <div class="mobile-overlay"></div>
+    <nav
+        class="section-container nav-container"
+        role="navigation"
+        aria-label="Main navigation"
+    >
+        <div class="logo-container">
+            <a href="/" class="logo" aria-label="One Space Away home">
+                One Space Away
+            </a>
+        </div>
 
-    <div class="nav-content">
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="/" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="#portfolio" class="nav-link">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a href="#how-it-works" class="nav-link">How it Works</a>
-        </li>
-        <li class="nav-item">
-          <a href="#about" class="nav-link">About</a>
-        </li>
+        <div class="nav-content">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#how-it-works" class="nav-link">How it Works</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
 
-        <li class="nav-item">
-          <a href="#contact" class="nav-link">Contact</a>
-        </li>
-      </ul>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
 
-      <a href="#contact" class="nav-link btns--secondary mobile-cta">
-        <span class="btn--secondary btn--secondary-unhovered"
-          >Let's work together</span
+            <a href="#contact" class="nav-link btns--secondary mobile-cta">
+                <span class="btn--secondary btn--secondary-unhovered"
+                    >Let's work together</span
+                >
+                <span
+                    class="btn--secondary btn--secondary-hovered"
+                    aria-hidden="true"
+                >
+                    Let's work together
+                </span>
+            </a>
+        </div>
+
+        <!-- Desktop CTA -->
+        <a href="#contact" class="btns--secondary desktop-cta">
+            <span class="btn--secondary btn--secondary-unhovered"
+                >Let's work together</span
+            >
+            <span
+                class="btn--secondary btn--secondary-hovered"
+                aria-hidden="true"
+            >
+                Let's work together
+            </span>
+        </a>
+
+        <button
+            class="hamburger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
         >
-        <span class="btn--secondary btn--secondary-hovered" aria-hidden="true">
-          Let's work together
-        </span>
-      </a>
-    </div>
-
-    <!-- Desktop CTA -->
-    <a href="#contact" class="btns--secondary desktop-cta">
-      <span class="btn--secondary btn--secondary-unhovered"
-        >Let's work together</span
-      >
-      <span class="btn--secondary btn--secondary-hovered" aria-hidden="true">
-        Let's work together
-      </span>
-    </a>
-
-    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-    </button>
-  </nav>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </nav>
 </header>
 
 <div id="trigger" class="trigger"></div>
 
 <style>
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: var(--h-menu-bar);
-    display: flex;
-    padding-inline: var(--px-32);
-    z-index: var(--z-max);
-    transition: all var(--transition-short);
-  }
-
-  .nav-container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: var(--text-base);
-    font-weight: 500;
-  }
-
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: var(--px-28);
-    height: var(--px-18);
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    z-index: var(--z-max);
-  }
-
-  .hamburger-line {
-    display: block;
-    width: 100%;
-    height: var(--px-2);
-    background-color: currentColor;
-    transition: transform var(--transition-medium);
-  }
-
-  .nav-menu {
-    display: flex;
-  }
-
-  .nav-item {
-    margin-inline: var(--px-16);
-  }
-
-  .nav-link:not(.mobile-cta) {
-    display: flex;
-    opacity: 0.65;
-    transition: all var(--transition-short);
-  }
-
-  .nav-link:active {
-    opacity: 1;
-    transform: scale(0.98);
-  }
-
-  .desktop-cta {
-    display: inline-block;
-  }
-
-  .mobile-cta {
-    display: none;
-  }
-
-  .btn--secondary {
-    border-bottom: var(--px-2) solid currentColor;
-  }
-
-  .btn--secondary-unhovered {
-    display: block;
-  }
-
-  .btn--secondary-hovered {
-    display: block;
-  }
-
-  .scrolled {
-    height: var(--h-menu-bar-scrolled) !important;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: var(--shadow-header);
-  }
-
-  .mobile-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--color-overlay);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    z-index: var(--z-50);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-  }
-
-  .mobile-overlay.active {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .trigger {
-    height: 1px;
-  }
-
-  @media (hover: hover) and (pointer: fine) {
-    .nav-link:hover {
-      opacity: 1;
-    }
-  }
-
-  @media screen and (max-width: 64rem) {
     .header {
-      padding-inline: var(--px-16);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--h-menu-bar);
+        display: flex;
+        padding-inline: var(--px-32);
+        z-index: var(--z-max);
+        transition: all var(--transition-short);
     }
 
-    .desktop-cta {
-      display: none;
-    }
-
-    .mobile-cta {
-      display: inline-block;
-    }
-
-    .btn--secondary {
-      font-size: var(--text-2xl);
+    .nav-container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: var(--text-base);
+        font-weight: 500;
     }
 
     .hamburger {
-      display: flex;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: var(--px-28);
+        height: var(--px-18);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: var(--z-max);
     }
 
-    .nav-content {
-      z-index: var(--z-999);
-      position: fixed;
-      top: 0;
-      right: -100%;
-      height: 100vh;
-      width: 100%;
-      max-width: 18.75rem;
-      background: white;
-      flex-direction: column;
-      padding: calc(var(--h-menu-bar) + 2rem) var(--px-16) var(--px-32);
-      transition: right 0.3s ease;
-      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-      justify-content: flex-start;
-    }
-
-    .nav-content.active {
-      right: 0;
+    .hamburger-line {
+        display: block;
+        width: 100%;
+        height: var(--px-2);
+        background-color: currentColor;
+        transition: transform var(--transition-medium);
     }
 
     .nav-menu {
-      flex-direction: column;
-      gap: var(--px-20);
-      margin-bottom: var(--px-40);
-      justify-content: flex-start;
+        display: flex;
     }
 
     .nav-item {
-      margin: 0;
+        margin-inline: var(--px-16);
     }
 
     .nav-link:not(.mobile-cta) {
-      font-size: var(--text-2xl);
+        display: flex;
+        opacity: 0.65;
+        transition: all var(--transition-short);
     }
 
-    .hamburger.active .hamburger-line:nth-child(1) {
-      transform: translateY(0.438rem) rotate(45deg);
+    .nav-link:active {
+        opacity: 1;
+        transform: scale(0.98);
     }
 
-    .hamburger.active .hamburger-line:nth-child(2) {
-      opacity: 0;
+    .desktop-cta {
+        display: inline-block;
     }
 
-    .hamburger.active .hamburger-line:nth-child(3) {
-      transform: translateY(-0.563rem) rotate(-45deg);
+    .mobile-cta {
+        display: none;
     }
-  }
+
+    .btn--secondary {
+        border-bottom: var(--px-2) solid currentColor;
+    }
+
+    .btn--secondary-unhovered {
+        display: block;
+    }
+
+    .btn--secondary-hovered {
+        display: block;
+    }
+
+    .scrolled {
+        height: var(--h-menu-bar-scrolled) !important;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: var(--shadow-header);
+    }
+
+    .mobile-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-overlay);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        z-index: var(--z-50);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .trigger {
+        height: 1px;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .nav-link:hover {
+            opacity: 1;
+        }
+    }
+
+    @media screen and (max-width: 64rem) {
+        .header {
+            padding-inline: var(--px-16);
+        }
+
+        .desktop-cta {
+            display: none;
+        }
+
+        .mobile-cta {
+            display: inline-block;
+        }
+
+        .btn--secondary {
+            font-size: var(--text-2xl);
+        }
+
+        .hamburger {
+            display: flex;
+        }
+
+        .nav-content {
+            z-index: var(--z-999);
+            position: fixed;
+            top: 0;
+            right: -100%;
+            height: 100vh;
+            width: 100%;
+            max-width: 18.75rem;
+            background: white;
+            flex-direction: column;
+            padding: calc(var(--h-menu-bar) + 2rem) var(--px-16) var(--px-32);
+            transition: right 0.3s ease;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            justify-content: flex-start;
+        }
+
+        .nav-content.active {
+            right: 0;
+        }
+
+        .nav-menu {
+            flex-direction: column;
+            gap: var(--px-20);
+            margin-bottom: var(--px-40);
+            justify-content: flex-start;
+        }
+
+        .nav-item {
+            margin: 0;
+        }
+
+        .nav-link:not(.mobile-cta) {
+            font-size: var(--text-2xl);
+        }
+
+        .hamburger.active .hamburger-line:nth-child(1) {
+            transform: translateY(0.438rem) rotate(45deg);
+        }
+
+        .hamburger.active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active .hamburger-line:nth-child(3) {
+            transform: translateY(-0.563rem) rotate(-45deg);
+        }
+    }
 </style>
 
 <script>
-  function observeHeader() {
-    const trigger = document.getElementById('trigger');
-    const header = document.getElementById('header');
+    function observeHeader() {
+        const trigger = document.getElementById("trigger");
+        const header = document.getElementById("header");
 
-    if (!trigger || !header) return;
+        if (!trigger || !header) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        header.classList.toggle('scrolled', !entry.isIntersecting);
-      },
-      { threshold: 0 }
-    );
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                header.classList.toggle("scrolled", !entry.isIntersecting);
+            },
+            { threshold: 0 },
+        );
 
-    observer.observe(trigger);
+        observer.observe(trigger);
 
-    return () => observer.disconnect();
-  }
-
-  function initMobileMenu() {
-    const hamburger = document.querySelector('.hamburger');
-    const navContent = document.querySelector('.nav-content');
-    const overlay = document.querySelector('.mobile-overlay');
-
-    if (!hamburger || !navContent || !overlay) return;
-
-    function closeMenu() {
-      hamburger?.classList.remove('active');
-      navContent?.classList.remove('active');
-      overlay?.classList.remove('active');
-      hamburger?.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('no-scroll');
+        return () => observer.disconnect();
     }
 
-    function openMenu() {
-      hamburger?.classList.add('active');
-      navContent?.classList.add('active');
-      overlay?.classList.add('active');
-      hamburger?.setAttribute('aria-expanded', 'true');
-      document.body.classList.add('no-scroll');
+    function initMobileMenu() {
+        const hamburger = document.querySelector(".hamburger");
+        const navContent = document.querySelector(".nav-content");
+        const overlay = document.querySelector(".mobile-overlay");
+
+        if (!hamburger || !navContent || !overlay) return;
+
+        function closeMenu() {
+            hamburger?.classList.remove("active");
+            navContent?.classList.remove("active");
+            overlay?.classList.remove("active");
+            hamburger?.setAttribute("aria-expanded", "false");
+            document.body.classList.remove("no-scroll");
+        }
+
+        function openMenu() {
+            hamburger?.classList.add("active");
+            navContent?.classList.add("active");
+            overlay?.classList.add("active");
+            hamburger?.setAttribute("aria-expanded", "true");
+            document.body.classList.add("no-scroll");
+        }
+
+        const toggleMenu = () => {
+            hamburger.classList.contains("active") ? closeMenu() : openMenu();
+        };
+
+        const handleEscape = (e: KeyboardEvent) => {
+            if (e.key === "Escape" && hamburger.classList.contains("active")) {
+                closeMenu();
+            }
+        };
+
+        // Event delegation for nav links
+        navContent.addEventListener("click", (e) => {
+            const target = e.target as HTMLElement;
+            if (target.classList.contains("nav-link")) {
+                closeMenu();
+            }
+        });
+
+        hamburger.addEventListener("click", toggleMenu);
+        overlay.addEventListener("click", closeMenu);
+        document.addEventListener("keydown", handleEscape);
+
+        return () => {
+            hamburger.removeEventListener("click", toggleMenu);
+            navContent.removeEventListener("click", closeMenu);
+            overlay.removeEventListener("click", closeMenu);
+            document.removeEventListener("keydown", handleEscape);
+        };
     }
 
-    const toggleMenu = () => {
-      hamburger.classList.contains('active') ? closeMenu() : openMenu();
-    };
+    let headerCleanup = observeHeader();
+    let menuCleanup = initMobileMenu();
 
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && hamburger.classList.contains('active')) {
-        closeMenu();
-      }
-    };
-
-    // Event delegation for nav links
-    navContent.addEventListener('click', e => {
-      const target = e.target as HTMLElement;
-      if (target.classList.contains('nav-link')) {
-        closeMenu();
-      }
+    document.addEventListener("astro:after-swap", () => {
+        if (headerCleanup) headerCleanup();
+        if (menuCleanup) menuCleanup();
+        headerCleanup = observeHeader();
+        menuCleanup = initMobileMenu();
     });
-
-    hamburger.addEventListener('click', toggleMenu);
-    overlay.addEventListener('click', closeMenu);
-    document.addEventListener('keydown', handleEscape);
-
-    return () => {
-      hamburger.removeEventListener('click', toggleMenu);
-      navContent.removeEventListener('click', closeMenu);
-      overlay.removeEventListener('click', closeMenu);
-      document.removeEventListener('keydown', handleEscape);
-    };
-  }
-
-  let headerCleanup = observeHeader();
-  let menuCleanup = initMobileMenu();
-
-  document.addEventListener('astro:after-swap', () => {
-    if (headerCleanup) headerCleanup();
-    if (menuCleanup) menuCleanup();
-    headerCleanup = observeHeader();
-    menuCleanup = initMobileMenu();
-  });
 </script>

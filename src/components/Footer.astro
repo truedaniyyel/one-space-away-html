@@ -1,238 +1,245 @@
 ---
-import { SITE, SOCIALS } from '@consts';
-import socialIcons from '@assets/socialIcons';
+import { SITE, SOCIALS } from "@consts";
+import socialIcons from "@assets/socialIcons";
 
 const currentYear = new Date().getFullYear();
 ---
 
 <footer class="main-footer">
-  <div class="section-container footer footer-primary">
-    <div class="footer-brand">
-      <a href="/" class="headline logo" aria-label="One Space Away home">
-        One Space Away
-      </a>
-      <p class="site-description">{SITE.DESCRIPTION}</p>
+    <div class="section-container footer footer-primary">
+        <div class="footer-brand">
+            <a href="/" class="headline logo" aria-label="One Space Away home">
+                One Space Away
+            </a>
+            <p class="site-description">{SITE.DESCRIPTION}</p>
 
-      <address class="footer-nav-list contact-info">
-        <p class="phone">
-          <span class="label">T.</span>
-          <a href=`tel:${SITE.TELEPHONE}`>{SITE.TELEPHONE}</a>
-        </p>
-        <p class="email">
-          <span class="label">E.</span>
-          <a href=`mailto:${SITE.EMAIL}`>{SITE.EMAIL}</a>
-        </p>
-      </address>
+            <address class="footer-nav-list contact-info">
+                <p class="phone">
+                    <span class="label">T.</span>
+                    <a href=`tel:${SITE.TELEPHONE}`>{SITE.TELEPHONE}</a>
+                </p>
+                <p class="email">
+                    <span class="label">E.</span>
+                    <a href=`mailto:${SITE.EMAIL}`>{SITE.EMAIL}</a>
+                </p>
+            </address>
+        </div>
+
+        <nav class="footer-navigation" aria-label="Footer navigation">
+            <div class="footer-nav-section">
+                <h2 class="headline footer-heading">Company</h2>
+                <ul class="footer-nav-list">
+                    <li>
+                        <a href="#hero" class="footer-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="footer-link">About</a>
+                    </li>
+                    <li>
+                        <a href="#how-it-works" class="footer-link"
+                            >How it Works</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="footer-link">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-nav-section">
+                <h2 class="headline footer-heading">Social Media</h2>
+                <ul class="footer-nav-list social-links-list">
+                    {
+                        SOCIALS.map((social) => (
+                            <>
+                                <li class="social-item">
+                                    <a
+                                        href={social.HREF}
+                                        aria-label={social.LABEL}
+                                        class="footer-link social-link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <Fragment
+                                            set:html={socialIcons[social.ICON]}
+                                        />
+                                        {social.NAME}
+                                    </a>
+                                </li>
+                            </>
+                        ))
+                    }
+                </ul>
+            </div>
+
+            <div class="footer-nav-section">
+                <h2 class="headline footer-heading">Legal & Press</h2>
+                <ul class="footer-nav-list">
+                    <li>
+                        <a href="legal/privacy" class="footer-link"
+                            >Privacy Policy</a
+                        >
+                    </li>
+                    <li>
+                        <a href="legal/terms" class="footer-link"
+                            >Terms & Conditions</a
+                        >
+                    </li>
+                    <li>
+                        <a href="/sitemap-index.xml" class="footer-link"
+                            >SiteMap</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
 
-    <nav class="footer-navigation" aria-label="Footer navigation">
-      <div class="footer-nav-section">
-        <h2 class="headline footer-heading">Company</h2>
-        <ul class="footer-nav-list">
-          <li>
-            <a href="#hero" class="footer-link">Home</a>
-          </li>
-          <li>
-            <a href="#about" class="footer-link">About</a>
-          </li>
-          <li>
-            <a href="#how-it-works" class="footer-link">How it Works</a>
-          </li>
-          <li>
-            <a href="#portfolio" class="footer-link">Portfolio</a>
-          </li>
-          <li>
-            <a href="#contact" class="footer-link">Contact</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-nav-section">
-        <h2 class="headline footer-heading">Social Media</h2>
-        <ul class="footer-nav-list social-links-list">
-          {
-            SOCIALS.map(social => (
-              <>
-                <li class="social-item">
-                  <a
-                    href={social.HREF}
-                    aria-label={social.LABEL}
-                    class="footer-link social-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Fragment set:html={socialIcons[social.ICON]} />
-                    {social.NAME}
-                  </a>
-                </li>
-              </>
-            ))
-          }
-        </ul>
-      </div>
-
-      <div class="footer-nav-section">
-        <h2 class="headline footer-heading">Legal & Press</h2>
-        <ul class="footer-nav-list">
-          <li>
-            <a href="legal/privacy" class="footer-link">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="legal/terms" class="footer-link">Terms & Conditions</a>
-          </li>
-          <li>
-            <a href="/rss.xml" class="footer-link">RSS</a>
-          </li>
-          <li>
-            <a href="/sitemap-index.xml" class="footer-link">SiteMap</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-
-  <div class="footer footer-secondary">
-    <div class="copyright">
-      <p>&copy; {SITE.COMPANY_NAME} {currentYear}.</p>
+    <div class="footer footer-secondary">
+        <div class="copyright">
+            <p>&copy; {SITE.COMPANY_NAME} {currentYear}.</p>
+        </div>
+        <div class="location">
+            <p>Based in Beverly Hills, California.</p>
+        </div>
     </div>
-    <div class="location">
-      <p>Based in Beverly Hills, California.</p>
-    </div>
-  </div>
 </footer>
 
 <style>
-  a {
-    transition: all var(--transition-short);
-  }
-
-  a:active {
-    color: var(--color-text-primary);
-  }
-
-  .main-footer {
-    background-color: var(--color-background);
-    padding-block: var(--px-112) var(--px-28);
-    padding-inline: var(--px-64);
-    color: var(--color-text-dark);
-    font-size: var(--text-sm);
-  }
-
-  .footer {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .headline {
-    color: var(--color-text-primary);
-  }
-
-  .main-footer p {
-    opacity: 1;
-  }
-
-  .footer-primary {
-    margin-bottom: var(--px-112);
-  }
-
-  .logo {
-    display: inline-block;
-    margin-bottom: var(--px-28);
-    font-size: var(--text-xl);
-    font-weight: 700;
-  }
-
-  .site-description {
-    margin-bottom: var(--px-32);
-  }
-
-  .footer-navigation {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
-    width: 100%;
-    margin-left: 16%;
-    gap: var(--px-96);
-  }
-
-  .footer-heading {
-    margin-bottom: var(--px-16);
-    font-size: var(--text-lg);
-    letter-spacing: -0.02em;
-    font-weight: 500;
-    text-wrap: nowrap;
-  }
-
-  .footer-nav-list {
-    display: inline-flex;
-    flex-direction: column;
-    font-size: var(--text-sm);
-    gap: var(--px-8);
-    text-wrap: nowrap;
-  }
-
-  .social-link {
-    display: flex;
-    align-items: center;
-    gap: var(--px-6);
-  }
-
-  .social-link :global(svg) {
-    height: var(--px-18);
-  }
-
-  .contact-info {
-    font-style: normal;
-  }
-
-  .footer-secondary {
-    font-weight: 500;
-  }
-
-  @media (hover: hover) and (pointer: fine) {
-    a:hover {
-      color: var(--color-text-primary);
+    a {
+        transition: all var(--transition-short);
     }
-  }
 
-  @media screen and (max-width: 64rem) {
+    a:active {
+        color: var(--color-text-primary);
+    }
+
     .main-footer {
-      padding-top: var(--px-80);
-      padding-inline: var(--px-28);
+        background-color: var(--color-background);
+        padding-block: var(--px-112) var(--px-28);
+        padding-inline: var(--px-64);
+        color: var(--color-text-dark);
+        font-size: var(--text-sm);
     }
 
     .footer {
-      flex-wrap: wrap;
-      gap: var(--px-48);
+        display: flex;
+        justify-content: space-between;
     }
 
-    .footer-navigation {
-      margin-left: 0;
-      width: auto;
+    .headline {
+        color: var(--color-text-primary);
+    }
+
+    .main-footer p {
+        opacity: 1;
     }
 
     .footer-primary {
-      margin-bottom: var(--px-80);
+        margin-bottom: var(--px-112);
     }
-  }
 
-  @media screen and (max-width: 37.5rem) {
-    .main-footer {
-      padding-top: var(--px-64);
+    .logo {
+        display: inline-block;
+        margin-bottom: var(--px-28);
+        font-size: var(--text-xl);
+        font-weight: 700;
+    }
+
+    .site-description {
+        margin-bottom: var(--px-32);
     }
 
     .footer-navigation {
-      grid-template-columns: 1fr;
-      width: 100%;
-      gap: var(--px-28);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        width: 100%;
+        margin-left: 16%;
+        gap: var(--px-96);
+    }
+
+    .footer-heading {
+        margin-bottom: var(--px-16);
+        font-size: var(--text-lg);
+        letter-spacing: -0.02em;
+        font-weight: 500;
+        text-wrap: nowrap;
+    }
+
+    .footer-nav-list {
+        display: inline-flex;
+        flex-direction: column;
+        font-size: var(--text-sm);
+        gap: var(--px-8);
+        text-wrap: nowrap;
+    }
+
+    .social-link {
+        display: flex;
+        align-items: center;
+        gap: var(--px-6);
+    }
+
+    .social-link :global(svg) {
+        height: var(--px-18);
+    }
+
+    .contact-info {
+        font-style: normal;
     }
 
     .footer-secondary {
-      gap: var(--px-6) var(--px-48);
+        font-weight: 500;
     }
 
-    .footer-primary {
-      margin-bottom: var(--px-48);
+    @media (hover: hover) and (pointer: fine) {
+        a:hover {
+            color: var(--color-text-primary);
+        }
     }
-  }
+
+    @media screen and (max-width: 64rem) {
+        .main-footer {
+            padding-top: var(--px-80);
+            padding-inline: var(--px-28);
+        }
+
+        .footer {
+            flex-wrap: wrap;
+            gap: var(--px-48);
+        }
+
+        .footer-navigation {
+            margin-left: 0;
+            width: auto;
+        }
+
+        .footer-primary {
+            margin-bottom: var(--px-80);
+        }
+    }
+
+    @media screen and (max-width: 37.5rem) {
+        .main-footer {
+            padding-top: var(--px-64);
+        }
+
+        .footer-navigation {
+            grid-template-columns: 1fr;
+            width: 100%;
+            gap: var(--px-28);
+        }
+
+        .footer-secondary {
+            gap: var(--px-6) var(--px-48);
+        }
+
+        .footer-primary {
+            margin-bottom: var(--px-48);
+        }
+    }
 </style>
