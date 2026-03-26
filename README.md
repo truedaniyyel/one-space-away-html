@@ -1,12 +1,15 @@
-One Space Away - Interior Design Template
+# One Space Away - Interior Design Template
 
 **One Space Away** is single-page template built for interior designers, architects, and home stylists.
+
+<img width="1910" height="915" alt="PageSpeed Insights" src="https://github.com/user-attachments/assets/8b3bd9cf-6e91-4624-bda5-aa5cf71e950b" />
 
 **Features**
 
 - Astro 6.0 Ready:
   - Native Font Optimization
   - Pre-configured CSP (Content Security Policy) and security headers (optimized for Cloudflare, easily adaptable for Vercel or Netlify).
+    <img width="1910" height="915" alt="HTTP Observatory" src="https://github.com/user-attachments/assets/4a38f8c3-c851-4239-a0b5-73f80fe8be57" />
 - Responsive: mobile, tablet, and desktop devices.
 - Stack: Astro (HTML, CSS, and JS) with minimal dependencies.
 
