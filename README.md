@@ -10,6 +10,12 @@ One Space Away - Interior Design Template
 - Responsive: mobile, tablet, and desktop devices.
 - Stack: Astro (HTML, CSS, and JS) with minimal dependencies.
 
+## Deployment
+
+You will find a `_headers `file located in the `/public` folder. This file handles the Content Security Policy (CSP) and XSS protections mainly for Cloudflare.
+
+If you are deploying to Vercel or Netlify, simply move these rules to a `vercel.json` or `netlify.toml` file respectively.
+
 ## Media & Image Optimization
 
 ### Local Optimization (Default)
@@ -31,6 +37,10 @@ import consultationImage from '/src/assets/images/consultation.jpg';
 ### Cloudinary Integration (Optional)
 
 For top-tier loading speeds and high-resolution assets, you can easily swap to [Astro-Cloudinary](https://docs.astro.build/en/guides/media/cloudinary/).
+
+```
+pnpm add astro-cloudinary
+```
 
 ```astro
 import { CldImage } from 'astro-cloudinary';
