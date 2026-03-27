@@ -70,12 +70,14 @@ const projects = [
                                 src={project.images.before.src}
                                 alt={project.images.before.alt}
                                 width={800}
+                                aria-hidden="true"
                             />
                             <Image
                                 class="image after active"
                                 src={project.images.after.src}
                                 alt={project.images.after.alt}
                                 width={800}
+                                aria-hidden="false"
                             />
                         </div>
                         <div class="project-info">
@@ -216,8 +218,17 @@ const projects = [
         });
 
         const updateSlideView = (view: string, slide: HTMLElement) => {
-            slide.querySelector(".image.active")?.classList.remove("active");
-            slide.querySelector(`.image.${view}`)?.classList.add("active");
+            const images = slide.querySelectorAll(".image");
+
+            images.forEach((img) => {
+                if (img.classList.contains(view)) {
+                    img.classList.add("active");
+                    img.setAttribute("aria-hidden", "false");
+                } else {
+                    img.classList.remove("active");
+                    img.setAttribute("aria-hidden", "true");
+                }
+            });
         };
 
         document.addEventListener("click", (e) => {
