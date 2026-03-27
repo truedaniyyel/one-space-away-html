@@ -1,252 +1,264 @@
 ---
-import BaseSwiper from './BaseSwiper.astro';
-import { Image } from 'astro:assets';
-import before1Image from '/src/assets/images/before1.png';
-import after1Image from '/src/assets/images/after1.png';
-import before2Image from '/src/assets/images/before2.png';
-import after2Image from '/src/assets/images/after2.png';
+import BaseSwiper from "./BaseSwiper.astro";
+import { Image } from "astro:assets";
+import before1Image from "/src/assets/images/before1.png";
+import after1Image from "/src/assets/images/after1.png";
+import before2Image from "/src/assets/images/before2.png";
+import after2Image from "/src/assets/images/after2.png";
 
 const projects = [
-  {
-    id: 1,
-    images: {
-      before: {
-        src: before1Image,
-        alt: 'Unfinished, under renovation with construction tools, exposed wiring, and partially installed marble-patterned tiles.',
-      },
-      after: {
-        src: after1Image,
-        alt: 'A modern, open-concept living space with a wooden table, chairs, and a metal staircase. The room is lit by ceiling lights and natural sunlight from large windows.',
-      },
+    {
+        id: 1,
+        images: {
+            before: {
+                src: before1Image,
+                alt: "Unfinished, under renovation with construction tools, exposed wiring, and partially installed marble-patterned tiles.",
+            },
+            after: {
+                src: after1Image,
+                alt: "A modern, open-concept living space with a wooden table, chairs, and a metal staircase. The room is lit by ceiling lights and natural sunlight from large windows.",
+            },
+        },
+        info: {
+            challenge: {
+                title: "Client's Challenge",
+                text: "We wanted to transform our unfinished space into a modern, functional home with an open-concept design that maximizes space, brings in plenty of natural light, and fits seamlessly into our daily lives.",
+            },
+            result: {
+                title: "Result",
+                text: "Our home now feels more open and airy. The transformation has expanded our living area, making every room feel larger and brighter. With a design that prioritizes natural light, our home is now perfectly set up for everyday living and family moments.",
+            },
+        },
     },
-    info: {
-      challenge: {
-        title: "Client's Challenge",
-        text: 'We wanted to transform our unfinished space into a modern, functional home with an open-concept design that maximizes space, brings in plenty of natural light, and fits seamlessly into our daily lives.',
-      },
-      result: {
-        title: 'Result',
-        text: 'Our home now feels more open and airy. The transformation has expanded our living area, making every room feel larger and brighter. With a design that prioritizes natural light, our home is now perfectly set up for everyday living and family moments.',
-      },
+    {
+        id: 2,
+        images: {
+            before: {
+                src: before2Image,
+                alt: "An older kitchen with white cabinets, beige tile flooring, and white appliances.",
+            },
+            after: {
+                src: after2Image,
+                alt: "A modern kitchen with dark wood cabinets, stainless steel appliances, and a stone backsplash.",
+            },
+        },
+        info: {
+            challenge: {
+                title: "Client's Challenge",
+                text: "Our kitchen felt outdated. The all-white design was plain, and the layout wasn't as functional as it could be. We wanted a space with better lighting that made cooking more enjoyable.",
+            },
+            result: {
+                title: "Result",
+                text: "Now, our kitchen feels completely renewed. The improved lighting makes the space brighter and more welcoming, while the new wood-style elements fit perfectly with our vision.",
+            },
+        },
     },
-  },
-  {
-    id: 2,
-    images: {
-      before: {
-        src: before2Image,
-        alt: 'An older kitchen with white cabinets, beige tile flooring, and white appliances.',
-      },
-      after: {
-        src: after2Image,
-        alt: 'A modern kitchen with dark wood cabinets, stainless steel appliances, and a stone backsplash.',
-      },
-    },
-    info: {
-      challenge: {
-        title: "Client's Challenge",
-        text: "Our kitchen felt outdated. The all-white design was plain, and the layout wasn't as functional as it could be. We wanted a space with better lighting that made cooking more enjoyable.",
-      },
-      result: {
-        title: 'Result',
-        text: 'Now, our kitchen feels completely renewed. The improved lighting makes the space brighter and more welcoming, while the new wood-style elements fit perfectly with our vision.',
-      },
-    },
-  },
 ];
 ---
 
 <section id="portfolio" class="portfolio">
-  <div class="section-container">
-    <span class="section-tag">PORTFOLIO</span>
-    <h2 class="section-title">See the transformation.</h2>
-    <BaseSwiper sliderName="portfolio" beforeAfter>
-      {
-        projects.map(project => (
-          <div class="swiper-slide">
-            <div class="project-image">
-              <Image
-                class="image before"
-                src={project.images.before.src}
-                alt={project.images.before.alt}
-              />
-              <Image
-                class="image after active"
-                src={project.images.after.src}
-                alt={project.images.after.alt}
-              />
-            </div>
-            <div class="project-info">
-              <div class="info-section">
-                <h3 class="section-subtitle info-title">
-                  {project.info.challenge.title}
-                </h3>
-                <p class="info-text">{project.info.challenge.text}</p>
-              </div>
-              <div class="info-section">
-                <h3 class="section-subtitle info-title">
-                  {project.info.result.title}
-                </h3>
-                <p class="info-text">{project.info.result.text}</p>
-              </div>
-            </div>
-          </div>
-        ))
-      }
-    </BaseSwiper>
-  </div>
+    <div class="section-container">
+        <span class="section-tag">PORTFOLIO</span>
+        <h2 class="section-title">See the transformation.</h2>
+        <BaseSwiper sliderName="portfolio" beforeAfter>
+            {
+                projects.map((project) => (
+                    <div class="swiper-slide">
+                        <div class="project-image">
+                            <Image
+                                class="image before"
+                                src={project.images.before.src}
+                                alt={project.images.before.alt}
+                                width={1600}
+                            />
+                            <Image
+                                class="image after active"
+                                src={project.images.after.src}
+                                alt={project.images.after.alt}
+                                width={1600}
+                            />
+                        </div>
+                        <div class="project-info">
+                            <div class="info-section">
+                                <h3 class="section-subtitle info-title">
+                                    {project.info.challenge.title}
+                                </h3>
+                                <p class="info-text">
+                                    {project.info.challenge.text}
+                                </p>
+                            </div>
+                            <div class="info-section">
+                                <h3 class="section-subtitle info-title">
+                                    {project.info.result.title}
+                                </h3>
+                                <p class="info-text">
+                                    {project.info.result.text}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                ))
+            }
+        </BaseSwiper>
+    </div>
 </section>
 
 <style>
-  :global(.portfolio-swiper) {
-    padding-inline: var(--px-64);
-    position: relative;
-  }
-
-  .swiper-slide {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--px-64);
-    opacity: 0;
-    transform: scale(0.75);
-    transition: all var(--transition-long);
-  }
-
-  .swiper-slide-active {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  .swiper-slide-prev,
-  .swiper-slide-next {
-    opacity: 0;
-    transform: scale(0.75);
-  }
-
-  .project-image {
-    position: relative;
-    min-height: 25rem;
-    overflow: hidden;
-  }
-
-  .image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity var(--transition-long);
-  }
-
-  .image.active {
-    opacity: 1;
-  }
-
-  .project-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: var(--px-32);
-  }
-
-  .info-section {
-    display: flex;
-    flex-direction: column;
-    gap: var(--px-16);
-  }
-
-  .info-title {
-    margin-bottom: 0;
-  }
-
-  .view-details {
-    display: inline-flex;
-    font-weight: 500;
-    margin-top: auto;
-  }
-
-  .btn--secondary {
-    border-bottom: var(--px-2) solid currentColor;
-  }
-
-  .btn--secondary-hovered {
-    display: block;
-  }
-
-  @media screen and (max-width: 64rem) {
-    .swiper-slide {
-      gap: var(--px-32);
-    }
-  }
-
-  @media screen and (max-width: 55rem) {
     :global(.portfolio-swiper) {
-      padding-inline: 0;
+        padding-inline: var(--px-64);
+        position: relative;
     }
 
     .swiper-slide {
-      grid-template-columns: 1fr;
-      gap: var(--px-32);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--px-64);
+        opacity: 0;
+        transform: scale(0.75);
+        transition: all var(--transition-long);
     }
-  }
+
+    .swiper-slide-active {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .swiper-slide-prev,
+    .swiper-slide-next {
+        opacity: 0;
+        transform: scale(0.75);
+    }
+
+    .project-image {
+        position: relative;
+        min-height: 25rem;
+        overflow: hidden;
+    }
+
+    .image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity var(--transition-long);
+    }
+
+    .image.active {
+        opacity: 1;
+    }
+
+    .project-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: var(--px-32);
+    }
+
+    .info-section {
+        display: flex;
+        flex-direction: column;
+        gap: var(--px-16);
+    }
+
+    .info-title {
+        margin-bottom: 0;
+    }
+
+    .view-details {
+        display: inline-flex;
+        font-weight: 500;
+        margin-top: auto;
+    }
+
+    .btn--secondary {
+        border-bottom: var(--px-2) solid currentColor;
+    }
+
+    .btn--secondary-hovered {
+        display: block;
+    }
+
+    @media screen and (max-width: 64rem) {
+        .swiper-slide {
+            gap: var(--px-32);
+        }
+    }
+
+    @media screen and (max-width: 55rem) {
+        :global(.portfolio-swiper) {
+            padding-inline: 0;
+        }
+
+        .swiper-slide {
+            grid-template-columns: 1fr;
+            gap: var(--px-32);
+        }
+    }
 </style>
 
 <script>
-  import { initSwiper } from '@utils/initSwiper';
+    import { initSwiper } from "@utils/initSwiper";
 
-  function initPortfolioSlider() {
-    const portfolioSwiper = initSwiper('portfolio', {
-      spaceBetween: 30,
-      navigation: {
-        nextEl: '.portfolio-next',
-        prevEl: '.portfolio-prev',
-      },
-      pagination: {
-        el: '.portfolio-pagination',
-        clickable: true,
-      },
+    function initPortfolioSlider() {
+        const portfolioSwiper = initSwiper("portfolio", {
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".portfolio-next",
+                prevEl: ".portfolio-prev",
+            },
+            pagination: {
+                el: ".portfolio-pagination",
+                clickable: true,
+            },
+        });
+
+        const updateSlideView = (view: string, slide: HTMLElement) => {
+            slide.querySelector(".image.active")?.classList.remove("active");
+            slide.querySelector(`.image.${view}`)?.classList.add("active");
+        };
+
+        document.addEventListener("click", (e) => {
+            const btn = (e.target as HTMLElement).closest<HTMLButtonElement>(
+                ".toggle-btn",
+            );
+            if (!btn) return;
+
+            document
+                .querySelector(".toggle-btn.active")
+                ?.classList.remove("active");
+            btn.classList.add("active");
+
+            const view = btn.dataset.view;
+            const currentSlide =
+                portfolioSwiper.slides[portfolioSwiper.activeIndex];
+            if (currentSlide && view) updateSlideView(view, currentSlide);
+        });
+
+        portfolioSwiper.on("slideChangeTransitionStart", () => {
+            const activeSlide =
+                portfolioSwiper.slides[portfolioSwiper.activeIndex];
+            if (activeSlide) updateSlideView("after", activeSlide);
+
+            document
+                .querySelector(".toggle-btn.active")
+                ?.classList.remove("active");
+            document
+                .querySelector('.toggle-btn[data-view="after"]')
+                ?.classList.add("active");
+        });
+
+        return () => {
+            portfolioSwiper.destroy();
+        };
+    }
+
+    let cleanup = initPortfolioSlider();
+
+    document.addEventListener("astro:after-swap", () => {
+        if (cleanup) cleanup();
+        cleanup = initPortfolioSlider();
     });
-
-    const updateSlideView = (view: string, slide: HTMLElement) => {
-      slide.querySelector('.image.active')?.classList.remove('active');
-      slide.querySelector(`.image.${view}`)?.classList.add('active');
-    };
-
-    document.addEventListener('click', e => {
-      const btn = (e.target as HTMLElement).closest<HTMLButtonElement>(
-        '.toggle-btn'
-      );
-      if (!btn) return;
-
-      document.querySelector('.toggle-btn.active')?.classList.remove('active');
-      btn.classList.add('active');
-
-      const view = btn.dataset.view;
-      const currentSlide = portfolioSwiper.slides[portfolioSwiper.activeIndex];
-      if (currentSlide && view) updateSlideView(view, currentSlide);
-    });
-
-    portfolioSwiper.on('slideChangeTransitionStart', () => {
-      const activeSlide = portfolioSwiper.slides[portfolioSwiper.activeIndex];
-      if (activeSlide) updateSlideView('after', activeSlide);
-
-      document.querySelector('.toggle-btn.active')?.classList.remove('active');
-      document
-        .querySelector('.toggle-btn[data-view="after"]')
-        ?.classList.add('active');
-    });
-
-    return () => {
-      portfolioSwiper.destroy();
-    };
-  }
-
-  let cleanup = initPortfolioSlider();
-
-  document.addEventListener('astro:after-swap', () => {
-    if (cleanup) cleanup();
-    cleanup = initPortfolioSlider();
-  });
 </script>
